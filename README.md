@@ -1,1 +1,1 @@
-# blog.gwansik.dev
+# gwansik.dev
