@@ -1,6 +1,8 @@
 import localFont from 'next/font/local';
 import './globals.css';
 import { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -23,6 +25,8 @@ export default function RootLayout({
         <main className="container text-gray-900 dark:text-gray-100 break-keep">
           {children}
         </main>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
