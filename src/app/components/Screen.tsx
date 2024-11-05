@@ -3,7 +3,7 @@ interface Props {
 }
 
 const Screen = ({ children }: Props) => {
-  return <div className='py-20 space-y-10'>{children}</div>;
+  return <div className='py-10 space-y-10'>{children}</div>;
 };
 
 export default Screen;

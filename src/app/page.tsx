@@ -1,7 +1,6 @@
 import Screen from './components/Screen';
-import HyperLink from './components/HyperLink';
-import Footer from './components/Footer';
 import Section from './components/Section';
+import HyperLink from './components/HyperLink';
 
 import { SiReactquery, SiPnpm, SiVitepress } from 'react-icons/si';
 import { IoDocument } from 'react-icons/io5';
@@ -94,7 +93,6 @@ export default function Home() {
         </p>
         <p>감사합니다!</p>
       </section>
-      <Footer />
     </Screen>
   );
 }
