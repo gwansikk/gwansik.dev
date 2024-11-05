@@ -20,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={`${pretendard.variable} antialiased p-4`}>
-        <main className="container text-gray-900 dark:text-gray-100 break-keep">
+        <main className='container text-gray-800 dark:text-gray-200 break-keep'>
           {children}
         </main>
         <Analytics />
