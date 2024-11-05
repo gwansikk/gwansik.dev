@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Badge from './components/Badge';
 
 export default function Home() {
   return (
@@ -11,17 +11,13 @@ export default function Home() {
         생각합니다.
       </p>
       <p>
-        개발 생태계에 관심을 가지고 오픈소스 활동을 하고 있습니다. 현재
-        Suspensive의 관리자로 활동하며 TanStack Query, pnpm 등 다수의 프로젝트에
-        기여하고 있습니다.
+        개발 생태계에 관심을 가지고 오픈소스 활동을 하고 있습니다. 현재&nbsp;
+        <Badge href="https://suspensive.org">Suspensive</Badge>의 관리자로
+        활동하며 TanStack Query, pnpm 등 다수의 프로젝트에 기여하고 있습니다.
       </p>
-      <div>
-        <Link
-          className="underline underline-offset-2"
-          href="https://github.com/gwansikk"
-        >
-          GitHub
-        </Link>
+      <div className="space-x-4">
+        <Badge href="https://github.com/gwansikk">GitHub</Badge>
+        <Badge href="https://www.linkedin.com/in/gwansikk">LinkedIn</Badge>
       </div>
     </div>
   );
