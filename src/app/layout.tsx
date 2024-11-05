@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${pretendard.variable} antialiased p-4`}>
-        <main className="container text-gray-900">{children}</main>
+        <main className="container text-gray-900 break-keep">{children}</main>
       </body>
     </html>
   );
