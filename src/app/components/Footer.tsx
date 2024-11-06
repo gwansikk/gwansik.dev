@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className='container text-sm text-gray-400'>
+    <footer className='container text-sm text-zinc-400'>
       <a
         className='hover:underline underline-offset-2'
         href='https://creativecommons.org/licenses/by-nc-sa/4.0'

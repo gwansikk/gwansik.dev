@@ -22,10 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
+    <html lang='ko'>
       <body className={`${pretendard.variable} antialiased p-4`}>
         <Nav />
-        <main className='container text-gray-800 dark:text-gray-200 break-keep'>
+        <main className='container text-zinc-800 dark:text-zinc-200 break-keep'>
           {children}
         </main>
         <Footer />
