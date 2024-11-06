@@ -1,8 +1,4 @@
-interface Props {
-  children: React.ReactNode;
-}
-
-const Screen = ({ children }: Props) => {
+const Screen = ({ children }: React.PropsWithChildren) => {
   return <div className='py-10 space-y-10'>{children}</div>;
 };
 
