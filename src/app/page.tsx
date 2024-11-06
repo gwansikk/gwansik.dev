@@ -1,5 +1,7 @@
 import Screen from './components/Screen';
 import Section from './components/Section';
+import List from './components/List';
+import Title from './components/Title';
 import HyperLink from './components/HyperLink';
 
 import { SiReactquery, SiPnpm, SiVitepress } from 'react-icons/si';
@@ -11,8 +13,8 @@ export default function Home() {
   return (
     <Screen>
       <section>
-        <h1 className='text-3xl font-bold'>Gwansik Kim</h1>
-        <h3 className='text-gray-500'>Frontend Engineer</h3>
+        <Title>Gwansik Kim</Title>
+        <h3 className='text-zinc-500'>Frontend Engineer</h3>
       </section>
       <section className='space-y-6'>
         <p>안녕하세요, 개발자 김관식입니다.</p>
@@ -28,20 +30,20 @@ export default function Home() {
         </p>
         <p>
           영향력을 확장하여 개발 생태계에 관심을 가지고 오픈소스 활동을 하고
-          있어요. 현재&nbsp;
+          있어요. 현재{' '}
           <HyperLink href='https://suspensive.org'>Suspensive</HyperLink>의
           관리자로 활동하며 TanStack Query, pnpm 등 다수의 프로젝트에 기여하고
           있습니다.
         </p>
       </section>
       <Section title='다음 프로젝트를 관리하거나 기여하고 있어요.'>
-        <div className='flex gap-2'>
+        <List>
           <HyperLink href='https://suspensive.org'>Suspensive</HyperLink>
           <HyperLink href='https://query-adaptor.gwansik.dev'>
             Query Adaptor
           </HyperLink>
-        </div>
-        <div className='flex gap-2'>
+        </List>
+        <List>
           <HyperLink
             icon={<SiReactquery />}
             href='https://github.com/TanStack/query/issues?q=involves%3Agwansikk'
@@ -60,11 +62,11 @@ export default function Home() {
           >
             VitePress
           </HyperLink>
-        </div>
+        </List>
       </Section>
       <Section title='다음 채널에서 저의 활동을 살펴볼 수 있어요.'>
-        <div className='flex gap-2'>
-          <HyperLink icon={<IoDocument />} href=''>
+        <List>
+          <HyperLink icon={<IoDocument />} href='resume'>
             Resume
           </HyperLink>
           <HyperLink icon={<FaGithub />} href='https://github.com/gwansikk'>
@@ -76,15 +78,15 @@ export default function Home() {
           >
             LinkedIn
           </HyperLink>
-          <HyperLink icon={<FaXTwitter />} href=''>
+          <HyperLink icon={<FaXTwitter />} href='https://x.com/gwansikk'>
             Twitter
           </HyperLink>
-        </div>
-        <div className='flex gap-2'>
+        </List>
+        <List>
           <HyperLink href='https://drive.google.com/file/d/1qcXOaFodRQBR9pa_nBcdIeKVdEZACQNx/view'>
             FEConf 2024 Lightning Talk - 오픈소스 기여, 어렵지 않아요!
           </HyperLink>
-        </div>
+        </List>
       </Section>
       <section>
         <p>
