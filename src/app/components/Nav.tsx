@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react';
 
 interface NavButtonProps {
   href: string;
@@ -10,7 +9,7 @@ const NavButton = ({ href, children }: NavButtonProps) => {
   return (
     <Link
       href={href}
-      className='text-gray-500 transition-colors hover:text-black dark:hover:text-white'
+      className='text-zinc-500 transition-colors hover:text-black dark:hover:text-white'
     >
       {children}
     </Link>
@@ -19,10 +18,12 @@ const NavButton = ({ href, children }: NavButtonProps) => {
 
 const Nav = () => {
   return (
-    <nav className='container flex items-center justify-end py-2'>
+    <nav className='container flex items-center justify-between py-2'>
+      <NavButton href='/'>gwansikk</NavButton>
       <div className='flex items-center gap-4'>
-        <NavButton href=''>Blog</NavButton>
-        <NavButton href=''>Projects</NavButton>
+        <NavButton href='posts'>Posts</NavButton>
+        <NavButton href='projects'>Projects</NavButton>
+        <NavButton href='notes'>Notes</NavButton>
       </div>
     </nav>
   );
