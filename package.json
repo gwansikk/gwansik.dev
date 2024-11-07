@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --port 1362",
-    "build": "next build",
+    "build": "velite & next build",
     "build:velite": "velite",
     "start": "next start",
     "lint": "next lint"
