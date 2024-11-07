@@ -7,7 +7,7 @@ interface Props {
 
 const ArticleMetadata = ({ date, readingTime }: Props) => {
   return (
-    <div className='text-sm text-zinc-500 space-x-2'>
+    <div className='text-zinc-500 space-x-2'>
       <span>{new Date(date).toLocaleDateString('ko-KR')}</span>
       <span>{readingTime}분</span>
     </div>

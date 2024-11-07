@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang='ko'>
       <body className={`${pretendard.variable} antialiased p-4`}>
         <Nav />
-        <main className='container text-zinc-800 dark:text-zinc-200 break-keep'>
+        <main className='container text-zinc-700 dark:text-zinc-200 break-keep'>
           <Article>{children}</Article>
         </main>
         <Footer />
