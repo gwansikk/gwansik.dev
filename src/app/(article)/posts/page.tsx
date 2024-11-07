@@ -11,22 +11,25 @@ export default function Posts() {
         <Title>Posts</Title>
         <Description>경험</Description>
       </header>
-      <div className='space-y-4'>
+      <ul className='space-y-6'>
         {posts.map((post) => (
-          <Link
-            key={post.slug}
-            href={post.permalink}
-            className='flex items-end gap-2 hover:text-white transition-colors'
-          >
-            <p className='font-semibold'>{post.title}</p>
-            <p>·</p>
-            <ArticleMetadata
-              date={post.date}
-              readingTime={post.metadata.readingTime}
-            />
-          </Link>
+          <li key={post.slug}>
+            <Link
+              href={post.permalink}
+              className='flex items-center gap-2 dark:hover:text-white transition-colors hover:text-black'
+            >
+              <p className='font-semibold'>{post.title}</p>
+              <div className='items-center justify-center gap-2 hidden sm:flex'>
+                <span className='text-zinc-500'>·</span>
+                <ArticleMetadata
+                  date={post.date}
+                  readingTime={post.metadata.readingTime}
+                />
+              </div>
+            </Link>
+          </li>
         ))}
-      </div>
+      </ul>
     </>
   );
 }

@@ -18,13 +18,13 @@ export default async function Post({ params }: Props) {
 
   return (
     <>
-      <section>
+      <header>
         <Title>{post.title}</Title>
         <ArticleMetadata
           date={post.date}
           readingTime={post.metadata.readingTime}
         />
-      </section>
+      </header>
       <MDXContent code={post.code} components={{}} />
     </>
   );
