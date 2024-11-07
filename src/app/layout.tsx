@@ -3,8 +3,9 @@ import './globals.css';
 import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import Nav from './components/Nav';
-import Footer from './components/Footer';
+import Nav from '@/app/components/Nav';
+import Footer from '@/app/components/Footer';
+import Article from '@/app/components/Article';
 
 const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -26,7 +27,7 @@ export default function RootLayout({
       <body className={`${pretendard.variable} antialiased p-4`}>
         <Nav />
         <main className='container text-zinc-800 dark:text-zinc-200 break-keep'>
-          {children}
+          <Article>{children}</Article>
         </main>
         <Footer />
         <Analytics />

@@ -1,8 +1,7 @@
-import Screen from './components/Screen';
-import Section from './components/Section';
-import List from './components/List';
-import Title from './components/Title';
-import HyperLink from './components/HyperLink';
+import Section from '@/app/components/Section';
+import List from '@/app/components/List';
+import Title from '@/app/components/Title';
+import HyperLink from '@/app/components/HyperLink';
 
 import { SiReactquery, SiPnpm, SiVitepress } from 'react-icons/si';
 import { IoDocument } from 'react-icons/io5';
@@ -11,11 +10,11 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Home() {
   return (
-    <Screen>
-      <section>
+    <>
+      <header>
         <Title>Gwansik Kim</Title>
-        <h3 className='text-zinc-500'>Frontend Engineer</h3>
-      </section>
+        <h2 className='text-zinc-500'>Frontend Engineer</h2>
+      </header>
       <section className='space-y-6'>
         <p>안녕하세요, 개발자 김관식입니다.</p>
         <p>
@@ -93,6 +92,6 @@ export default function Home() {
         </p>
         <p>감사합니다!</p>
       </section>
-    </Screen>
+    </>
   );
 }
