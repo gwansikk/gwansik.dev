@@ -3,13 +3,7 @@ import List from '@/app/components/List';
 import Title from '@/app/components/Title';
 import HyperLink from '@/app/components/HyperLink';
 
-import {
-  SiReactquery,
-  SiPnpm,
-  SiVitepress,
-  SiVite,
-  SiGraphql,
-} from 'react-icons/si';
+import { SiReactquery, SiPnpm } from 'react-icons/si';
 import { FaAddressCard, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
@@ -24,8 +18,7 @@ export default function Home() {
         <p>안녕하세요, 개발자 김관식입니다.</p>
         <p>
           저는 TypeScript 기반으로 Node.js 런타임 환경에서 프로덕트를 개발하며,
-          풀타임 작업 시간 외에는 프론트엔드 오픈소스 컨트리뷰터로 활동하고
-          있어요.
+          풀타임 작업 외에는 프론트엔드 오픈소스 메이커로 활동하고 있어요.
         </p>
         <p>
           주변에서 겪는 문제를 기술로 해결하고자 창업과 개발을 시작했어요.
@@ -34,7 +27,8 @@ export default function Home() {
           중요하게 생각합니다.
         </p>
         <p>
-          개발 생태계에 관심을 가지고 오픈소스 활동을 하고 있어요. 현재{' '}
+          영향력을 확장하고자 개발 생태계에 관심을 가지고 오픈소스 활동을 하고
+          있어요. 현재{' '}
           <HyperLink href='https://suspensive.org'>Suspensive</HyperLink>의
           관리자로 라이브러리를 개발하고 있으며 TanStack Query, pnpm 등 여러
           프로젝트에 기여한 경험이 있습니다.
@@ -60,12 +54,6 @@ export default function Home() {
           >
             pnpm
           </HyperLink>
-          <HyperLink
-            icon={<SiVitepress />}
-            href='https://github.com/vuejs/vitepress/issues?q=involves%3Agwansikk'
-          >
-            VitePress
-          </HyperLink>
         </List>
       </Section>
       <Section title='저의 활동을 살펴볼 수 있어요.'>
@@ -90,17 +78,6 @@ export default function Home() {
           <HyperLink href='https://drive.google.com/file/d/1qcXOaFodRQBR9pa_nBcdIeKVdEZACQNx/view'>
             FEConf 2024 Lightning Talk - 오픈소스 기여, 어렵지 않아요!
           </HyperLink>
-        </List>
-      </Section>
-      <Section title='관심있게 연구하고 있어요.'>
-        <List>
-          <HyperLink icon={<SiVite />} href='https://vite.dev'>
-            Vite
-          </HyperLink>
-          <HyperLink icon={<SiGraphql />} href='https://graphql.org'>
-            GraphQL
-          </HyperLink>
-          <HyperLink href='https://effect.website'>Effect</HyperLink>
         </List>
       </Section>
       <section>
