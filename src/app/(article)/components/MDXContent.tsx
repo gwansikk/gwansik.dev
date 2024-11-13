@@ -1,8 +1,5 @@
 import * as runtime from 'react/jsx-runtime';
-
-const sharedComponents = {
-  // Add your global components here
-};
+import { type MDXComponents } from 'mdx/types';
 
 const useMDXComponent = (code: string) => {
   const fn = new Function(code);
@@ -11,10 +8,10 @@ const useMDXComponent = (code: string) => {
 
 interface MDXProps {
   code: string;
-  components?: Record<string, React.ComponentType>;
+  components?: MDXComponents;
 }
 
 export const MDXContent = ({ code, components }: MDXProps) => {
   const Component = useMDXComponent(code);
-  return <Component components={{ ...sharedComponents, ...components }} />;
+  return <Component components={components} />;
 };

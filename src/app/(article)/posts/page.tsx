@@ -1,4 +1,4 @@
-import { posts } from '#content';
+import { type Post as PostProps, posts } from '#content';
 import Link from 'next/link';
 import Title from '@/app/components/Title';
 import Description from '@/app/components/Description';
@@ -13,23 +13,29 @@ export default function Posts() {
       </header>
       <ul className='space-y-6'>
         {posts.map((post) => (
-          <li key={post.slug}>
-            <Link
-              href={post.permalink}
-              className='flex items-center gap-2 dark:hover:text-white transition-colors hover:text-black'
-            >
-              <p className='font-semibold'>{post.title}</p>
-              <div className='items-center justify-center gap-2 hidden sm:flex'>
-                <span className='text-zinc-500'>·</span>
-                <ArticleMetadata
-                  date={post.date}
-                  readingTime={post.metadata.readingTime}
-                />
-              </div>
-            </Link>
-          </li>
+          <Post key={post.slug} post={post} />
         ))}
       </ul>
     </>
   );
 }
+
+const Post = ({ post }: { post: PostProps }) => {
+  return (
+    <li key={post.slug}>
+      <Link
+        href={post.permalink}
+        className='flex items-center gap-2 dark:hover:text-white transition-colors hover:text-black'
+      >
+        <p className='font-semibold'>{post.title}</p>
+        <div className='items-center justify-center gap-2 hidden sm:flex'>
+          <span className='text-zinc-500'>·</span>
+          <ArticleMetadata
+            date={post.date}
+            readingTime={post.metadata.readingTime}
+          />
+        </div>
+      </Link>
+    </li>
+  );
+};
