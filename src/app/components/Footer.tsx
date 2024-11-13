@@ -9,7 +9,7 @@ const Footer = () => {
       >
         CC BY-NC-SA 4.0
       </a>{' '}
-      © Gwansik Kim
+      &copy; Gwansik Kim
     </footer>
   );
 };
