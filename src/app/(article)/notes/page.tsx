@@ -5,7 +5,7 @@ export default function Notes() {
   return (
     <header>
       <Title>Notes</Title>
-      <Description>고찰</Description>
+      <Description>생각</Description>
     </header>
   );
 }
