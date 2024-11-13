@@ -1,10 +1,8 @@
-interface Props {
-  href: string;
-  children: React.ReactNode;
+interface Props extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   icon?: React.ReactNode;
 }
 
-const HyperLink = ({ icon, href, children }: Props) => {
+const Anchor = ({ icon, href, children }: Props) => {
   return (
     <a
       href={href}
@@ -18,4 +16,4 @@ const HyperLink = ({ icon, href, children }: Props) => {
   );
 };
 
-export default HyperLink;
+export default Anchor;

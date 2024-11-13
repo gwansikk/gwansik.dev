@@ -1,7 +1,7 @@
 import Section from '@/app/components/Section';
 import List from '@/app/components/List';
 import Title from '@/app/components/Title';
-import HyperLink from '@/app/components/HyperLink';
+import Anchor from '@/app/components/Anchor';
 
 import { SiReactquery, SiPnpm } from 'react-icons/si';
 import { FaAddressCard, FaGithub, FaLinkedin } from 'react-icons/fa';
@@ -28,56 +28,55 @@ export default function Home() {
         </p>
         <p>
           영향력을 확장하고자 개발 생태계에 관심을 가지고 오픈소스 활동을 하고
-          있어요. 현재{' '}
-          <HyperLink href='https://suspensive.org'>Suspensive</HyperLink>의
-          관리자로 라이브러리를 개발하고 있으며 TanStack Query, pnpm 등 여러
+          있어요. 현재 <Anchor href='https://suspensive.org'>Suspensive</Anchor>
+          의 관리자로 라이브러리를 개발하고 있으며 TanStack Query, pnpm 등 여러
           프로젝트에 기여한 경험이 있습니다.
         </p>
       </section>
-      <Section title='관리하거나 기여하고 있어요.'>
+      <Section title='해당 프로젝트를 관리하거나 기여하고 있어요.'>
         <List>
-          <HyperLink href='https://suspensive.org'>Suspensive</HyperLink>
-          <HyperLink href='https://query-adaptor.gwansik.dev'>
+          <Anchor href='https://suspensive.org'>Suspensive</Anchor>
+          <Anchor href='https://query-adaptor.gwansik.dev'>
             Query Adaptor
-          </HyperLink>
+          </Anchor>
         </List>
         <List>
-          <HyperLink
+          <Anchor
             icon={<SiReactquery />}
             href='https://github.com/TanStack/query/issues?q=involves%3Agwansikk'
           >
             TanStack Query
-          </HyperLink>
-          <HyperLink
+          </Anchor>
+          <Anchor
             icon={<SiPnpm />}
             href='https://github.com/pnpm/pnpm/issues?q=involves%3Agwansikk'
           >
             pnpm
-          </HyperLink>
+          </Anchor>
         </List>
       </Section>
       <Section title='저의 활동을 살펴볼 수 있어요.'>
         <List>
-          <HyperLink icon={<FaAddressCard />} href='resume'>
+          <Anchor icon={<FaAddressCard />} href='resume'>
             Resume
-          </HyperLink>
-          <HyperLink icon={<FaGithub />} href='https://github.com/gwansikk'>
+          </Anchor>
+          <Anchor icon={<FaGithub />} href='https://github.com/gwansikk'>
             GitHub
-          </HyperLink>
-          <HyperLink
+          </Anchor>
+          <Anchor
             icon={<FaLinkedin />}
             href='https://www.linkedin.com/in/gwansikk'
           >
             LinkedIn
-          </HyperLink>
-          <HyperLink icon={<FaXTwitter />} href='https://x.com/gwansikk'>
+          </Anchor>
+          <Anchor icon={<FaXTwitter />} href='https://x.com/gwansikk'>
             Twitter
-          </HyperLink>
+          </Anchor>
         </List>
         <List>
-          <HyperLink href='https://drive.google.com/file/d/1qcXOaFodRQBR9pa_nBcdIeKVdEZACQNx/view'>
+          <Anchor href='https://drive.google.com/file/d/1qcXOaFodRQBR9pa_nBcdIeKVdEZACQNx/view'>
             FEConf 2024 Lightning Talk - 오픈소스 기여, 어렵지 않아요!
-          </HyperLink>
+          </Anchor>
         </List>
       </Section>
       <section>
