@@ -26,14 +26,14 @@ const Nav = () => {
         <NavButton href={PATH.POSTS}>Posts</NavButton>
         <NavButton href={PATH.PROJECTS}>Projects</NavButton>
         <NavButton href={PATH.NOTES}>Notes</NavButton>
-        <a
+        <Link
           href={PATH.GITHUB}
+          className='text-zinc-500 transition-colors hover:text-black dark:hover:text-white'
           target='_blank'
           rel='noopener noreferrer'
-          className='text-zinc-500 transition-colors hover:text-black dark:hover:text-white'
         >
           <LuGithub />
-        </a>
+        </Link>
       </div>
     </nav>
   );
