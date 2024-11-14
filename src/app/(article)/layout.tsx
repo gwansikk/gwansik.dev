@@ -1,4 +1,4 @@
-import BackButton from '@/app/components/BackButton';
+import PreviousButton from '@/app/components/previous-button';
 import { PATH } from '../constants';
 
 export default function ArticleLayout({
@@ -9,7 +9,7 @@ export default function ArticleLayout({
   return (
     <>
       {children}
-      <BackButton href={PATH.POSTS} />
+      <PreviousButton href={PATH.POSTS} />
     </>
   );
 }

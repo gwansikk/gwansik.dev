@@ -1,8 +1,8 @@
 import { type Post as PostProps, posts } from '#content';
 import Link from 'next/link';
-import Title from '@/app/components/Title';
-import Description from '@/app/components/Description';
-import ArticleMetadata from '@/app/(article)/components/ArticleMetadata';
+import Title from '@/app/components/title';
+import Description from '@/app/components/description';
+import ArticleMetadata from '@/app/(article)/components/article-metadata';
 
 export default function Posts() {
   return (

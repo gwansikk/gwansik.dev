@@ -1,5 +1,5 @@
-import Title from '@/app/components/Title';
-import Description from '@/app/components/Description';
+import Title from '@/app/components/title';
+import Description from '@/app/components/description';
 
 export default function Projects() {
   return (

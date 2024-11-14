@@ -1,4 +1,5 @@
 import { type MDXComponents } from 'mdx/types';
+import Image from 'next/image';
 
 export const mdxComponents: MDXComponents = {
   h1: ({ children, ...props }) => (
@@ -28,5 +29,5 @@ export const mdxComponents: MDXComponents = {
       {children}
     </a>
   ),
-  img: (props) => <img className='rounded-lg' {...props} />,
+  img: ({ src, alt }) => <Image className='rounded-lg' src={src!} alt={alt!} />,
 };

@@ -1,9 +1,9 @@
 import { posts } from '#content';
-import { MDXContent } from '@/app/(article)/components/MDXContent';
+import { MDXContent } from '@/app/(article)/components/mdx-content';
 import { notFound } from 'next/navigation';
-import Title from '@/app/components/Title';
-import ArticleMetadata from '@/app/(article)/components/ArticleMetadata';
-import { mdxComponents } from '@/app/(article)/components/mdxComponents';
+import Title from '@/app/components/title';
+import ArticleMetadata from '@/app/(article)/components/article-metadata';
+import { mdxComponents } from '@/app/(article)/components/mdx-components';
 
 export async function generateStaticParams() {
   return posts.map((post) => ({

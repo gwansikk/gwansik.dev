@@ -4,7 +4,7 @@ interface Props {
   href: string;
 }
 
-const BackButton = ({ href }: Props) => {
+const PreviousButton = ({ href }: Props) => {
   return (
     <Link
       href={href}
@@ -15,4 +15,4 @@ const BackButton = ({ href }: Props) => {
   );
 };
 
-export default BackButton;
+export default PreviousButton;
