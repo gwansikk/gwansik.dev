@@ -5,11 +5,17 @@ import Title from '@/app/components/Title';
 import ArticleMetadata from '@/app/(article)/components/ArticleMetadata';
 import { mdxComponents } from '@/app/(article)/components/mdxComponents';
 
-interface Props {
-  params: Promise<{ slug: string }>;
+export async function generateStaticParams() {
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
 }
 
-export default async function Post({ params }: Props) {
+export default async function Post({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const post = posts.find((i) => i.slug === slug);
 
