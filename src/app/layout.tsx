@@ -5,7 +5,6 @@ import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import Nav from '@/app/components/Nav';
 import Footer from '@/app/components/Footer';
-import Body from './components/Body';
 
 const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -24,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='ko'>
-      <Body className={pretendard.variable}>
+      <body className={`antialiased p-4 ${pretendard.variable}`}>
         <Nav />
         <main className='container text-zinc-700 dark:text-zinc-200 break-keep'>
           <article className='py-14 space-y-10'>{children}</article>
@@ -32,7 +31,7 @@ export default function RootLayout({
         <Footer />
         <Analytics />
         <SpeedInsights />
-      </Body>
+      </body>
     </html>
   );
 }
