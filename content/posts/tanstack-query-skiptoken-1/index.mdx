@@ -10,11 +10,13 @@ TanStack Query에서 조건에 따라 쿼리를 비활성화 혹은 일시정지
 
 # TanStack Query란
 
+![TanStack Query 랜딩 페이지](./tanstack-query-latest.webp)
+
 프론트엔드 기술셋에서 TanStack Query(예전엔 React Query라고 불러졌습니다.)는 데이터 패치, 동기화, 업데이트 등 서버 상태 관리를 위한 라이브러리이에요. 데이터를 서버에서 가져오고 이를 캐싱하고 자동으로 상태를 업데이트하는 등 편리한 기능을 제공하고 있어요. 프런트엔드 개발자라면 아주 친숙하죠.
 
 # skipToken은 뭔가요
 
-쿼리가 자동으로 실행되지 않도록 하려면 `enabled` 옵션이나 `skipToken`을 사용해야해요. 특히 `skipToken은` 조건에 따라 쿼리를 비활성화하고 싶을 때 사용해요.
+쿼리가 자동으로 실행되지 않도록 하려면 `enabled` 옵션이나 `skipToken을` 사용해야해요. 특히 `skipToken은` 조건에 따라 쿼리를 비활성화하고 싶을 때 사용해요.
 
 ```ts
 // TanStack Query 공식 Docs의 예제 일부
@@ -74,11 +76,15 @@ useQueries를 사용하여 다양한 쿼리를 한 번에 처리하는 경우가
 
 # 개발 중 마주친 문제는 버그였다
 
+![PR#7035](./PR7035.webp)
+
 useQuerirs에서 skipToken을 사용하면 정상적인 타입 추론이 안되는 버그는 3월 6일 깃허브 이슈를 통해 제보된 상태였어요. 제 환경에서만 겪는 문제가 아니었습니다.
 
 해당 이슈를 보자마자 내가 한 번 해결해 봐야겠다고 생각되었고, 이전에 오픈소스에 기여한 기억으로 CONTRIBUTING.md도 살펴봤어요. 이전에 기여했던 VitePress와 크게 다른 점이 없었고 바로 포크(Fork)를 진행하여 환경 세팅을 했습니다.
 
 # 엄청난 코드, 삽질의 시작
+
+![tanstack-query](./code.webp)
 
 로컬 환경에 세팅 후 코드를 열어본 순간 깜짝 놀랐어요. 엄청난 코드의 양과 프로젝트 규모… 모노레포(Monorepo)로 많은 라이브러리(Vue, Svelte, Solid, React, Angular)로 구성되어 있었어요.
 
@@ -130,7 +136,11 @@ useQueries를 이해하려면 먼저 useQuery에 대해 알아야 했고 선언�
 
 # 해결할 수 있는 희망이 보이다
 
+![comment-hint](./comment-hint.webp)
+
 해당 이슈를 해결하고자 하는 시도는 여러 차례 있었습니다. `as const`를 통해 읽기 전용으로 하게 되면 정상적으로 타입 추론이 가능하다는 댓글(Comment)가 있었고 Jaaneek 개발자님께서 해당 이슈를 고친 PR(#7037)을 보낸 상태였습니다. 하지만 해당 PR은 Merge가 아닌 Closed 상태였어요.
+
+![comment-skiptoken](./comment-skiptoken.webp)
 
 해당 문제를 해결할 수 있지만 solid/vue/svelte에 적용하면 에러가 발생되어 지금 좋은 해결 책을 찾을 수 없다는 이유로 Closed 상태가 된 것이에요.
 
@@ -212,7 +222,11 @@ it('TData should have correct type when conditional skipToken is passed', () => 
 
 최종적으로 해당 이슈에 대한 테스트 코드도 작성하여 사전에 에러를 식별하고 유지보수 용이하도록 하였습니다.
 
+![comment-tkdodo](./comment-tkdodo.webp)
+
 PR(#7150)을 생성하고 TanStack Query의 Maintainer인 TkDodo 개발자님이 다른 어댑터(Angular, Solid, Svelte, Vue)에도 적용하여 동일한 버그를 개선해달라는 댓글이 달려 추가로 커밋하여 해당 이슈를 완벽히 개선할 수 있었어요. 그 다음 날 Merge 되어 TanStack Query의 Contributor가 됐습니다. 👏
+
+![changelog](./changelog.webp)
 
 제가 개선한 타입 추론 버그는 `v5.28.8`에 포함되어 릴리즈가 되었습니다.
 

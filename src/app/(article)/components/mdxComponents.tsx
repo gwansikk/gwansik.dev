@@ -28,4 +28,5 @@ export const mdxComponents: MDXComponents = {
       {children}
     </a>
   ),
+  img: (props) => <img className='rounded-lg' {...props} />,
 };
