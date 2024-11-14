@@ -23,21 +23,9 @@ export const mdxComponents: MDXComponents = {
   blockquote: (props) => (
     <blockquote className='!my-2 border-l-4 py-0.5 pl-4' {...props} />
   ),
-  pre: (props) => (
-    <pre
-      className='overflow-auto border p-4 rounded-lg text-sm dark:border-zinc-700'
-      {...props}
-    />
-  ),
   a: ({ children, ...props }) => (
     <a className='text-blue-400 hover:underline' {...props}>
       {children}
     </a>
-  ),
-  code: (props) => (
-    <code
-      className='border border-zinc-200 dark:border-zinc-800 rounded-md px-1'
-      {...props}
-    />
   ),
 };
