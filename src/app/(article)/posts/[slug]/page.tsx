@@ -7,17 +7,31 @@ import { mdxComponents } from '@/app/(article)/components/mdx-components';
 import PreviousButton from '@/app/components/previous-button';
 import { PATH } from '@/app/constants';
 
+interface Params {
+  params: Promise<{ slug: string }>;
+}
+
 export async function generateStaticParams() {
   return posts.map((post) => ({
     slug: post.slug,
   }));
 }
 
-export default async function Post({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export async function generateMetadata({ params }: Params) {
+  const { slug } = await params;
+
+  const post = posts.find((i) => i.slug === slug);
+
+  if (!post) {
+    return;
+  }
+
+  return {
+    title: post.title,
+  };
+}
+
+export default async function Post({ params }: Params) {
   const { slug } = await params;
   const post = posts.find((i) => i.slug === slug);
 
