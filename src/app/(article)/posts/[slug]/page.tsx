@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 import Title from '@/app/components/title';
 import ArticleMetadata from '@/app/(article)/components/article-metadata';
 import { mdxComponents } from '@/app/(article)/components/mdx-components';
+import PreviousButton from '@/app/components/previous-button';
+import { PATH } from '@/app/constants';
 
 export async function generateStaticParams() {
   return posts.map((post) => ({
@@ -33,6 +35,7 @@ export default async function Post({
         />
       </header>
       <MDXContent code={post.code} components={mdxComponents} />
+      <PreviousButton href={PATH.POSTS} />
     </>
   );
 }

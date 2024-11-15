@@ -3,6 +3,12 @@ import Link from 'next/link';
 import Title from '@/app/components/title';
 import Description from '@/app/components/description';
 import ArticleMetadata from '@/app/(article)/components/article-metadata';
+import PreviousButton from '@/app/components/previous-button';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Posts - Gwansik Kim',
+};
 
 export default function Posts() {
   return (
@@ -16,6 +22,7 @@ export default function Posts() {
           <Post key={post.slug} post={post} />
         ))}
       </ul>
+      <PreviousButton />
     </>
   );
 }
