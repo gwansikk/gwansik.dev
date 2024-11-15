@@ -29,5 +29,13 @@ export const mdxComponents: MDXComponents = {
       {children}
     </a>
   ),
-  img: ({ src, alt }) => <Image className='rounded-lg' src={src!} alt={alt!} />,
+  img: ({ src, alt }) => (
+    <Image
+      className='rounded-lg'
+      width={640}
+      height={360}
+      src={src!}
+      alt={alt!}
+    />
+  ),
 };
