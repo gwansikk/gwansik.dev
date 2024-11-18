@@ -7,7 +7,7 @@ import PreviousButton from '@/app/components/previous-button';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Posts - Gwansik Kim',
+  title: 'Posts | Gwansik Kim',
 };
 
 export default function Posts() {

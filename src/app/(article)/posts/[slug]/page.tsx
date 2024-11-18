@@ -6,6 +6,7 @@ import ArticleMetadata from '@/app/(article)/components/article-metadata';
 import { mdxComponents } from '@/app/(article)/components/mdx-components';
 import PreviousButton from '@/app/components/previous-button';
 import { PATH } from '@/app/constants';
+import List from '@/app/components/list';
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: Params) {
   }
 
   return {
-    title: post.title,
+    title: `${post.title} | Gwansik Kim`,
   };
 }
 
@@ -49,6 +50,12 @@ export default async function Post({ params }: Params) {
         />
       </header>
       <MDXContent code={post.code} components={mdxComponents} />
+      <List>
+        <button className='bg-gray-100 px-3 py-1 rounded-lg'>공유하기</button>
+        <button className='bg-gray-100 px-3 py-1 rounded-lg'>
+          의견 보내기
+        </button>
+      </List>
       <PreviousButton href={PATH.POSTS} />
     </>
   );

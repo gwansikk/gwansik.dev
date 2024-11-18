@@ -4,7 +4,7 @@ import { Metadata } from 'next';
 import PreviousButton from '@/app/components/previous-button';
 
 export const metadata: Metadata = {
-  title: 'Project - Gwansik Kim',
+  title: 'Project | Gwansik Kim',
 };
 
 export default function Projects() {
