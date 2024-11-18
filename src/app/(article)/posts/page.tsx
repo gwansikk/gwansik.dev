@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Title from '@/app/components/title';
 import Description from '@/app/components/description';
 import ArticleMetadata from '@/app/(article)/components/article-metadata';
-import PreviousButton from '@/app/components/previous-button';
+import PageLink from '@/app/components/page-link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -22,7 +22,7 @@ export default function Posts() {
           <Post key={post.slug} post={post} />
         ))}
       </ul>
-      <PreviousButton />
+      <PageLink />
     </>
   );
 }

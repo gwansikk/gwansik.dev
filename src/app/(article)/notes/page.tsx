@@ -1,6 +1,6 @@
 import Title from '@/app/components/title';
 import Description from '@/app/components/description';
-import PreviousButton from '@/app/components/previous-button';
+import PageLink from '@/app/components/page-link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -14,7 +14,7 @@ export default function Notes() {
         <Title>Notes</Title>
         <Description>생각</Description>
       </header>
-      <PreviousButton />
+      <PageLink />
     </>
   );
 }
