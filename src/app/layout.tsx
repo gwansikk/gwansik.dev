@@ -26,8 +26,8 @@ export default function RootLayout({
     <html lang='ko'>
       <body className={`antialiased p-4 ${pretendard.variable}`}>
         <Nav />
-        <main className='container text-zinc-700 dark:text-zinc-200 break-keep'>
-          <article className='py-14 space-y-10'>{children}</article>
+        <main className='container text-zinc-800 dark:text-zinc-200 break-keep leading-relaxed'>
+          <article className='py-14 space-y-8'>{children}</article>
         </main>
         <Footer />
         <Analytics />
