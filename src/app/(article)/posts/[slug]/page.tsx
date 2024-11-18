@@ -4,9 +4,11 @@ import { notFound } from 'next/navigation';
 import Title from '@/app/components/title';
 import ArticleMetadata from '@/app/(article)/components/article-metadata';
 import { mdxComponents } from '@/app/(article)/components/mdx-components';
-import PreviousButton from '@/app/components/previous-button';
+import PageLink from '@/app/components/page-link';
 import { PATH } from '@/app/constants';
 import List from '@/app/components/list';
+import CopyButton from '@/app/(article)/posts/[slug]/components/CopyButton';
+import MailButton from '@/app/(article)/posts/[slug]/components/MailButton';
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -40,6 +42,8 @@ export default async function Post({ params }: Params) {
     notFound();
   }
 
+  const nextPost = posts[posts.indexOf(post) + 1] || posts[0];
+
   return (
     <>
       <header>
@@ -51,12 +55,15 @@ export default async function Post({ params }: Params) {
       </header>
       <MDXContent code={post.code} components={mdxComponents} />
       <List>
-        <button className='bg-gray-100 px-3 py-1 rounded-lg'>공유하기</button>
-        <button className='bg-gray-100 px-3 py-1 rounded-lg'>
-          의견 보내기
-        </button>
+        <CopyButton />
+        <MailButton />
       </List>
-      <PreviousButton href={PATH.POSTS} />
+      <List className='justify-between'>
+        <PageLink href={PATH.POSTS} />
+        {nextPost && (
+          <PageLink href={nextPost.permalink}>{nextPost.title}</PageLink>
+        )}
+      </List>
     </>
   );
 }
