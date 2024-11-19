@@ -10,9 +10,9 @@ const Anchor = ({ icon, href, children }: Props) => {
   return (
     <Link
       href={href}
-      className='text-black dark:text-white border-b-[1px] dark:border-b-zinc-700 transition-colors inline-flex items-center justify-center gap-1 hover:border-b-black dark:hover:border-b-white'
-      target='_blank'
-      rel='noopener noreferrer'
+      className="inline-flex items-center justify-center gap-1 border-b-[1px] text-black transition-colors hover:border-b-black dark:border-b-zinc-700 dark:text-white dark:hover:border-b-white"
+      target="_blank"
+      rel="noopener noreferrer"
     >
       {icon}
       {children}

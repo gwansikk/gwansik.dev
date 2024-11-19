@@ -12,9 +12,9 @@ export default function Home() {
     <>
       <header>
         <Title>Gwansik Kim</Title>
-        <h2 className='text-zinc-500'>Frontend Engineer</h2>
+        <h2 className="text-zinc-500">Frontend Engineer</h2>
       </header>
-      <section className='space-y-6'>
+      <section className="space-y-6">
         <p>안녕하세요, 개발자 김관식입니다.</p>
         <p>
           저는 TypeScript 기반으로 Node.js 런타임 환경에서 프로덕트를 개발하며,
@@ -28,53 +28,53 @@ export default function Home() {
         </p>
         <p>
           영향력을 확장하고자 개발 생태계에 관심을 가지고 오픈소스 활동을 하고
-          있어요. 현재 <Anchor href='https://suspensive.org'>Suspensive</Anchor>
+          있어요. 현재 <Anchor href="https://suspensive.org">Suspensive</Anchor>
           의 관리자로 라이브러리를 개발하고 있으며 TanStack Query, pnpm 등 여러
           프로젝트에 기여한 경험이 있습니다.
         </p>
       </section>
-      <Section title='해당 프로젝트를 관리하거나 기여하고 있어요.'>
+      <Section title="해당 프로젝트를 관리하거나 기여하고 있어요.">
         <List>
-          <Anchor href='https://suspensive.org'>Suspensive</Anchor>
-          <Anchor href='https://query-adaptor.gwansik.dev'>
+          <Anchor href="https://suspensive.org">Suspensive</Anchor>
+          <Anchor href="https://query-adaptor.gwansik.dev">
             Query Adaptor
           </Anchor>
         </List>
         <List>
           <Anchor
             icon={<SiReactquery />}
-            href='https://github.com/TanStack/query/issues?q=involves%3Agwansikk'
+            href="https://github.com/TanStack/query/issues?q=involves%3Agwansikk"
           >
             TanStack Query
           </Anchor>
           <Anchor
             icon={<SiPnpm />}
-            href='https://github.com/pnpm/pnpm/issues?q=involves%3Agwansikk'
+            href="https://github.com/pnpm/pnpm/issues?q=involves%3Agwansikk"
           >
             pnpm
           </Anchor>
         </List>
       </Section>
-      <Section title='저의 활동을 살펴볼 수 있어요.'>
+      <Section title="저의 활동을 살펴볼 수 있어요.">
         <List>
-          <Anchor icon={<FaAddressCard />} href='resume'>
+          <Anchor icon={<FaAddressCard />} href="resume">
             Resume
           </Anchor>
-          <Anchor icon={<FaGithub />} href='https://github.com/gwansikk'>
+          <Anchor icon={<FaGithub />} href="https://github.com/gwansikk">
             GitHub
           </Anchor>
           <Anchor
             icon={<FaLinkedin />}
-            href='https://www.linkedin.com/in/gwansikk'
+            href="https://www.linkedin.com/in/gwansikk"
           >
             LinkedIn
           </Anchor>
-          <Anchor icon={<FaXTwitter />} href='https://x.com/gwansikk'>
+          <Anchor icon={<FaXTwitter />} href="https://x.com/gwansikk">
             Twitter
           </Anchor>
         </List>
         <List>
-          <Anchor href='https://drive.google.com/file/d/1qcXOaFodRQBR9pa_nBcdIeKVdEZACQNx/view'>
+          <Anchor href="https://drive.google.com/file/d/1qcXOaFodRQBR9pa_nBcdIeKVdEZACQNx/view">
             FEConf 2024 Lightning Talk - 오픈소스 기여, 어렵지 않아요!
           </Anchor>
         </List>

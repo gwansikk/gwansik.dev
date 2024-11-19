@@ -1,11 +1,11 @@
 const Footer = () => {
   return (
-    <footer className='container text-sm text-zinc-400 py-2'>
+    <footer className="container py-2 text-sm text-zinc-400">
       <a
-        className='hover:underline underline-offset-2'
-        href='https://creativecommons.org/licenses/by-nc-sa/4.0'
-        target='_blank'
-        rel='noopener noreferrer'
+        className="underline-offset-2 hover:underline"
+        href="https://creativecommons.org/licenses/by-nc-sa/4.0"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         CC BY-NC-SA 4.0
       </a>{' '}

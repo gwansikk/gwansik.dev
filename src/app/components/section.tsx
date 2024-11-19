@@ -4,8 +4,8 @@ interface Props {
 }
 const Section = ({ title, children }: Props) => {
   return (
-    <section className='space-y-2'>
-      <h3 className='text-zinc-500'>{title}</h3>
+    <section className="space-y-2">
+      <h3 className="text-zinc-500">{title}</h3>
       {children}
     </section>
   );

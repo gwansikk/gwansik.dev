@@ -17,7 +17,7 @@ export default function Posts() {
         <Title>Posts</Title>
         <Description>경험</Description>
       </header>
-      <ul className='space-y-6'>
+      <ul className="space-y-6">
         {posts.map((post) => (
           <Post key={post.slug} post={post} />
         ))}
@@ -32,11 +32,11 @@ const Post = ({ post }: { post: PostProps }) => {
     <li key={post.slug}>
       <Link
         href={post.permalink}
-        className='flex items-center gap-2 dark:hover:text-white transition-colors hover:text-black'
+        className="flex items-center gap-2 transition-colors hover:text-black dark:hover:text-white"
       >
-        <p className='font-semibold'>{post.title}</p>
-        <div className='items-center justify-center gap-2 hidden sm:flex'>
-          <span className='text-zinc-500'>·</span>
+        <p className="font-semibold">{post.title}</p>
+        <div className="hidden items-center justify-center gap-2 sm:flex">
+          <span className="text-zinc-500">·</span>
           <ArticleMetadata
             date={post.date}
             readingTime={post.metadata.readingTime}

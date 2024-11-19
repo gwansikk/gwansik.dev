@@ -133,34 +133,41 @@ export const useSchedule = ({ isNotAdmin }: UseScheduleParams) => {
 export type QueriesOptions<
   T extends Array<any>,
   TResults extends Array<any> = [],
-  TDepth extends ReadonlyArray<number> = []
+  TDepth extends ReadonlyArray<number> = [],
 > = TDepth['length'] extends MAXIMUM_DEPTH
   ? Array<UseQueryOptionsForUseQueries>
   : T extends []
-  ? []
-  : T extends [infer Head]
-  ? [...TResults, GetUseQueryOptionsForUseQueries<Head>]
-  : T extends [infer Head, ...infer Tails]
-  ? QueriesOptions<
-      [...Tails],
-      [...TResults, GetUseQueryOptionsForUseQueries<Head>],
-      [...TDepth, 1]
-    >
-  : Array<unknown> extends T
-  ? T
-  : // If T is *some* array but we couldn't assign unknown[] to it, then it must hold some known/homogenous type!
-  // use this to infer the param types in the case of Array.map() argument
-  T extends Array<
-      UseQueryOptionsForUseQueries<
-        infer TQueryFnData,
-        infer TError,
-        infer TData,
-        infer TQueryKey
-      >
-    >
-  ? Array<UseQueryOptionsForUseQueries<TQueryFnData, TError, TData, TQueryKey>>
-  : // Fallback
-    Array<UseQueryOptionsForUseQueries>;
+    ? []
+    : T extends [infer Head]
+      ? [...TResults, GetUseQueryOptionsForUseQueries<Head>]
+      : T extends [infer Head, ...infer Tails]
+        ? QueriesOptions<
+            [...Tails],
+            [...TResults, GetUseQueryOptionsForUseQueries<Head>],
+            [...TDepth, 1]
+          >
+        : Array<unknown> extends T
+          ? T
+          : // If T is *some* array but we couldn't assign unknown[] to it, then it must hold some known/homogenous type!
+            // use this to infer the param types in the case of Array.map() argument
+            T extends Array<
+                UseQueryOptionsForUseQueries<
+                  infer TQueryFnData,
+                  infer TError,
+                  infer TData,
+                  infer TQueryKey
+                >
+              >
+            ? Array<
+                UseQueryOptionsForUseQueries<
+                  TQueryFnData,
+                  TError,
+                  TData,
+                  TQueryKey
+                >
+              >
+            : // Fallback
+              Array<UseQueryOptionsForUseQueries>;
 ```
 
 어떤가요? 코드만 봐도 쉽지 않겠다는 생각이 들죠? 저도 그랬습니다. `useQueries`를 사용하는 것만 익숙했던 저로서는, 이 문제를 해결하기 위해 코드의 메커니즘과 타입 선언을 이해하는 데 많은 시간이 걸렸어요.
