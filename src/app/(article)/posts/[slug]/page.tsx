@@ -56,7 +56,7 @@ export default async function Post({ params }: Params) {
       <List className="justify-between">
         <PageLink href={PATH.POSTS} />
         {nextPost && (
-          <PageLink href={nextPost.permalink} className="w-2/3">
+          <PageLink href={nextPost.permalink} className="w-2/3 text-right">
             {nextPost.title}
           </PageLink>
         )}

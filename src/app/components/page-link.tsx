@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PATH } from '@/app/constants';
+import { cn } from '@/app/utils/cn';
 
 interface Props {
   href?: string;
@@ -9,7 +10,7 @@ interface Props {
 
 const PageLink = ({ href, className, children }: Props) => {
   return (
-    <p className={`truncate text-right ${className}`}>
+    <p className={cn('truncate', className)}>
       <Link
         href={href ?? PATH.ROOT}
         className="border-b-[1px] transition-colors hover:border-b-black dark:border-b-zinc-700 dark:hover:border-b-white"
