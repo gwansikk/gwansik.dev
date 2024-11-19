@@ -3,17 +3,20 @@ import { PATH } from '@/app/constants';
 
 interface Props {
   href?: string;
+  className?: string;
   children?: React.ReactNode;
 }
 
-const PageLink = ({ href, children }: Props) => {
+const PageLink = ({ href, className, children }: Props) => {
   return (
-    <Link
-      href={href ?? PATH.ROOT}
-      className='border-b-[1px] dark:border-b-zinc-700 transition-colors inline-flex items-center justify-center gap-1 hover:border-b-black dark:hover:border-b-white'
-    >
-      {children ?? '뒤로가기'}
-    </Link>
+    <p className={`truncate text-right ${className}`}>
+      <Link
+        href={href ?? PATH.ROOT}
+        className="border-b-[1px] transition-colors hover:border-b-black dark:border-b-zinc-700 dark:hover:border-b-white"
+      >
+        {children ?? '뒤로가기'}
+      </Link>
+    </p>
   );
 };
 

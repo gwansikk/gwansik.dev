@@ -15,23 +15,18 @@ interface Params {
 }
 
 export async function generateStaticParams() {
-  return posts.map((post) => ({
-    slug: post.slug,
-  }));
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: Params) {
   const { slug } = await params;
-
   const post = posts.find((i) => i.slug === slug);
 
   if (!post) {
     return;
   }
 
-  return {
-    title: `${post.title} | Gwansik Kim`,
-  };
+  return { title: `${post.title} | Gwansik Kim` };
 }
 
 export default async function Post({ params }: Params) {
@@ -58,10 +53,12 @@ export default async function Post({ params }: Params) {
         <CopyButton />
         <MailButton />
       </List>
-      <List className='justify-between'>
+      <List className="justify-between">
         <PageLink href={PATH.POSTS} />
         {nextPost && (
-          <PageLink href={nextPost.permalink}>{nextPost.title}</PageLink>
+          <PageLink href={nextPost.permalink} className="w-2/3">
+            {nextPost.title}
+          </PageLink>
         )}
       </List>
     </>
