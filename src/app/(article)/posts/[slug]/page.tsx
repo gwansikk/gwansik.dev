@@ -7,15 +7,11 @@ import { mdxComponents } from '@/app/(article)/components/mdx-components';
 import PageLink from '@/app/components/page-link';
 import { PATH } from '@/app/constants';
 import List from '@/app/components/list';
-import CopyButton from '@/app/(article)/posts/[slug]/components/CopyButton';
-import MailButton from '@/app/(article)/posts/[slug]/components/MailButton';
+import CopyButton from '@/app/(article)/components/copy-button';
+import MailButton from '@/app/(article)/components/mail-button';
 
 interface Params {
   params: Promise<{ slug: string }>;
-}
-
-export async function generateStaticParams() {
-  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: Params) {
@@ -27,6 +23,10 @@ export async function generateMetadata({ params }: Params) {
   }
 
   return { title: `${post.title} | Gwansik Kim` };
+}
+
+export async function generateStaticParams() {
+  return posts.map((post) => ({ slug: post.slug }));
 }
 
 export default async function Post({ params }: Params) {
