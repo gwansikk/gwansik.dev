@@ -1,7 +1,7 @@
-import Section from '@/app/components/section';
-import List from '@/app/components/list';
-import Title from '@/app/components/title';
-import Anchor from '@/app/components/anchor';
+import Section from '@/components/section';
+import List from '@/components/list';
+import Title from '@/components/title';
+import Anchor from '@/components/anchor';
 
 import { SiReactquery, SiPnpm } from 'react-icons/si';
 import { FaAddressCard, FaGithub, FaLinkedin } from 'react-icons/fa';

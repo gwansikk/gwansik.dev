@@ -1,14 +1,14 @@
 import { notes } from '#content';
-import { MDXContent } from '@/app/(article)/components/mdx-content';
+import { MDXContent } from '@/components/(article)/mdx-content';
 import { notFound } from 'next/navigation';
-import Title from '@/app/components/title';
-import ArticleMetadata from '@/app/(article)/components/article-metadata';
-import { mdxComponents } from '@/app/(article)/components/mdx-components';
-import PageLink from '@/app/components/page-link';
-import { PATH } from '@/app/constants';
-import List from '@/app/components/list';
-import CopyButton from '@/app/(article)/components/copy-button';
-import MailButton from '@/app/(article)/components/mail-button';
+import Title from '@/components/title';
+import ArticleMetadata from '@/components/(article)/article-metadata';
+import { mdxComponents } from '@/components/(article)/mdx-components';
+import PageLink from '@/components/page-link';
+import { PATH } from '@/constants/path';
+import List from '@/components/list';
+import CopyButton from '@/components/(article)/copy-button';
+import MailButton from '@/components/(article)/mail-button';
 
 interface Params {
   params: Promise<{ slug: string }>;

@@ -1,10 +1,10 @@
-import Title from '@/app/components/title';
-import Description from '@/app/components/description';
-import PageLink from '@/app/components/page-link';
+import Title from '@/components/title';
+import Description from '@/components/description';
+import PageLink from '@/components/page-link';
 import { Metadata } from 'next';
 import { notes, Note as TNote } from '#content';
 import Link from 'next/link';
-import ArticleMetadata from '../components/article-metadata';
+import ArticleMetadata from '@/components/(article)/article-metadata';
 
 export const metadata: Metadata = {
   title: 'Notes | Gwansik Kim',

@@ -2,10 +2,10 @@ import localFont from 'next/font/local';
 import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import Nav from '@/app/components/nav';
-import Footer from '@/app/components/footer';
+import Nav from '@/components/nav';
+import Footer from '@/components/footer';
 
-import './globals.css';
+import '../styles/globals.css';
 
 const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',

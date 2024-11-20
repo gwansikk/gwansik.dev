@@ -1,7 +1,7 @@
-import Title from '@/app/components/title';
-import Description from '@/app/components/description';
+import Title from '@/components/title';
+import Description from '@/components/description';
 import { Metadata } from 'next';
-import PageLink from '@/app/components/page-link';
+import PageLink from '@/components/page-link';
 
 export const metadata: Metadata = {
   title: 'Project | Gwansik Kim',

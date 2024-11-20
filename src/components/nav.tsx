@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { LuGithub } from 'react-icons/lu';
-import { PATH } from '../constants';
+import { PATH } from '@/constants/path';
 
 interface Props {
   href: string;

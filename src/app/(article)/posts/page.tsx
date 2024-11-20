@@ -1,9 +1,9 @@
-import { type Post as PostProps, posts } from '#content';
+import { type Post as TPost, posts } from '#content';
 import Link from 'next/link';
-import Title from '@/app/components/title';
-import Description from '@/app/components/description';
-import ArticleMetadata from '@/app/(article)/components/article-metadata';
-import PageLink from '@/app/components/page-link';
+import Title from '@/components/title';
+import Description from '@/components/description';
+import ArticleMetadata from '@/components/(article)/article-metadata';
+import PageLink from '@/components/page-link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -27,7 +27,7 @@ export default function Posts() {
   );
 }
 
-const Post = ({ post }: { post: PostProps }) => {
+const Post = ({ post }: { post: TPost }) => {
   return (
     <li key={post.slug}>
       <Link

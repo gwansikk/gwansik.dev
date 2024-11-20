@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { PATH } from '@/app/constants';
-import { cn } from '@/app/utils/cn';
+import { PATH } from '@/constants/path';
+import { cn } from '@/utils/cn';
 
 interface Props {
   href?: string;
