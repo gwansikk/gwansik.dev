@@ -29,5 +29,18 @@ export default defineConfig({
         })
         .transform((data) => ({ ...data, permalink: `/posts/${data.slug}` })),
     },
+    notes: {
+      name: 'Note',
+      pattern: 'notes/**/index.mdx',
+      schema: s
+        .object({
+          title: s.string(),
+          date: s.isodate(),
+          slug: s.slug('notes'),
+          metadata: s.metadata(),
+          code: s.mdx(),
+        })
+        .transform((data) => ({ ...data, permalink: `/notes/${data.slug}` })),
+    },
   },
 });
