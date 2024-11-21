@@ -74,7 +74,7 @@ export default function Home() {
           </Anchor>
         </List>
         <List>
-          <Anchor href="https://drive.google.com/file/d/1qcXOaFodRQBR9pa_nBcdIeKVdEZACQNx/view">
+          <Anchor href="https://www.gwansik.dev/posts/feconf-2024">
             FEConf 2024 Lightning Talk - 오픈소스 기여, 어렵지 않아요!
           </Anchor>
         </List>
