@@ -24,6 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <script
+        defer
+        data-site-id="www.gwansik.dev"
+        src="https://assets.onedollarstats.com/tracker.js"
+      />
       <body className={`p-4 antialiased ${pretendard.variable}`}>
         <Nav />
         <main className="container break-keep leading-relaxed text-zinc-800 dark:text-zinc-200">
