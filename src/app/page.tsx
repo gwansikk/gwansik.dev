@@ -3,7 +3,7 @@ import List from '@/components/list';
 import Title from '@/components/title';
 import Anchor from '@/components/anchor';
 
-import { SiReactquery, SiPnpm } from 'react-icons/si';
+import { SiReactquery, SiRescript, SiPnpm } from 'react-icons/si';
 import { FaAddressCard, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
@@ -46,6 +46,12 @@ export default function Home() {
             href="https://github.com/TanStack/query/issues?q=involves%3Agwansikk"
           >
             TanStack Query
+          </Anchor>
+          <Anchor
+            icon={<SiRescript />}
+            href="https://github.com/rescript-lang/rescript/issues?q=involves%3Agwansikk"
+          >
+            ReScript
           </Anchor>
           <Anchor
             icon={<SiPnpm />}
