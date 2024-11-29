@@ -4,7 +4,7 @@ import Title from '@/components/title';
 import Description from '@/components/description';
 import ArticleMetadata from '@/components/(article)/article-metadata';
 import PageLink from '@/components/page-link';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Posts | Gwansik Kim',

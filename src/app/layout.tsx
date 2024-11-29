@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Script from 'next/script';
 import localFont from 'next/font/local';
 import { Analytics } from '@vercel/analytics/react';

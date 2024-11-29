@@ -1,14 +1,12 @@
-interface Props {
-  children: React.ReactNode;
+interface Props extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode;
-  onClick?: () => void;
 }
 
-const Button = ({ icon, children, onClick }: Props) => {
+const Button = ({ icon, children, ...props }: Props) => {
   return (
     <button
       className="flex items-center gap-2 rounded-lg bg-zinc-100 px-3 py-1 transition-colors hover:bg-zinc-200 dark:bg-zinc-900 dark:hover:bg-zinc-800"
-      onClick={onClick}
+      {...props}
     >
       {icon}
       {children}

@@ -1,4 +1,4 @@
-import { type MDXComponents } from 'mdx/types';
+import type { MDXComponents } from 'mdx/types';
 import Image from 'next/image';
 
 export const mdxComponents: MDXComponents = {
@@ -43,8 +43,8 @@ export const mdxComponents: MDXComponents = {
       className="rounded-2xl border dark:border-black"
       width={640}
       height={360}
-      src={src!}
-      alt={alt!}
+      src={src as string}
+      alt={alt as string}
     />
   ),
 };

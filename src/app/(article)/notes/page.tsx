@@ -1,8 +1,8 @@
 import Title from '@/components/title';
 import Description from '@/components/description';
 import PageLink from '@/components/page-link';
-import { Metadata } from 'next';
-import { notes, Note as TNote } from '#content';
+import type { Metadata } from 'next';
+import { notes, type Note as TNote } from '#content';
 import Link from 'next/link';
 import ArticleMetadata from '@/components/(article)/article-metadata';
 
