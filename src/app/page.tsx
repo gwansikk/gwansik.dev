@@ -47,6 +47,9 @@ export default function Home() {
           >
             TanStack Query
           </Anchor>
+          <Anchor href="https://github.com/toss/es-toolkit/issues?q=involves%3Agwansikk">
+            es-toolkit
+          </Anchor>
           <Anchor
             icon={<SiRescript />}
             href="https://github.com/rescript-lang/rescript/issues?q=involves%3Agwansikk"
