@@ -3,9 +3,13 @@ import List from '@/components/list';
 import Title from '@/components/title';
 import Anchor from '@/components/anchor';
 
-import { SiReactquery, SiRescript, SiPnpm } from 'react-icons/si';
-import { FaAddressCard, FaGithub, FaLinkedin } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import {
+  SiReactquery,
+  SiRescript,
+  SiGithub,
+  SiLinkedin,
+  SiX,
+} from 'react-icons/si';
 
 export default function Home() {
   return (
@@ -56,29 +60,23 @@ export default function Home() {
           >
             ReScript
           </Anchor>
-          <Anchor
-            icon={<SiPnpm />}
-            href="https://github.com/pnpm/pnpm/issues?q=involves%3Agwansikk"
-          >
-            pnpm
-          </Anchor>
         </List>
       </Section>
       <Section title="저의 활동을 살펴볼 수 있어요.">
         <List>
-          <Anchor icon={<FaAddressCard />} href="resume">
+          {/* <Anchor icon={<FaAddressCard />} href="resume">
             Resume
-          </Anchor>
-          <Anchor icon={<FaGithub />} href="https://github.com/gwansikk">
+          </Anchor> */}
+          <Anchor icon={<SiGithub />} href="https://github.com/gwansikk">
             GitHub
           </Anchor>
           <Anchor
-            icon={<FaLinkedin />}
+            icon={<SiLinkedin />}
             href="https://www.linkedin.com/in/gwansikk"
           >
             LinkedIn
           </Anchor>
-          <Anchor icon={<FaXTwitter />} href="https://x.com/gwansikk">
+          <Anchor icon={<SiX />} href="https://x.com/gwansikk">
             Twitter
           </Anchor>
         </List>
