@@ -5,7 +5,7 @@ import Anchor from '@/components/anchor';
 
 import {
   SiReactquery,
-  SiRescript,
+  SiPnpm,
   SiGithub,
   SiLinkedin,
   SiX,
@@ -51,15 +51,21 @@ export default function Home() {
           >
             TanStack Query
           </Anchor>
+          <Anchor
+            icon={<SiPnpm />}
+            href="https://github.com/pnpm/pnpm/issues?q=involves%3Agwansikk"
+          >
+            pnpm
+          </Anchor>
           <Anchor href="https://github.com/toss/es-toolkit/issues?q=involves%3Agwansikk">
             es-toolkit
           </Anchor>
-          <Anchor
+          {/* <Anchor
             icon={<SiRescript />}
             href="https://github.com/rescript-lang/rescript/issues?q=involves%3Agwansikk"
           >
             ReScript
-          </Anchor>
+          </Anchor> */}
         </List>
       </Section>
       <Section title="저의 활동을 살펴볼 수 있어요.">
