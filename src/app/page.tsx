@@ -51,14 +51,14 @@ export default function Home() {
           >
             TanStack Query
           </Anchor>
+          <Anchor href="https://github.com/toss/es-toolkit/issues?q=involves%3Agwansikk">
+            es-toolkit
+          </Anchor>
           <Anchor
             icon={<SiPnpm />}
             href="https://github.com/pnpm/pnpm/issues?q=involves%3Agwansikk"
           >
             pnpm
-          </Anchor>
-          <Anchor href="https://github.com/toss/es-toolkit/issues?q=involves%3Agwansikk">
-            es-toolkit
           </Anchor>
           {/* <Anchor
             icon={<SiRescript />}
