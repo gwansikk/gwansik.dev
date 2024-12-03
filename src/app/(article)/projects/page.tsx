@@ -1,6 +1,6 @@
 import Title from '@/components/title';
 import Description from '@/components/description';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import PageLink from '@/components/page-link';
 
 export const metadata: Metadata = {
