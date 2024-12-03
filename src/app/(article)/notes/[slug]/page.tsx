@@ -37,7 +37,7 @@ export default async function Note({ params }: Params) {
     notFound();
   }
 
-  const nextPost = notes[notes.indexOf(note) + 1] || notes[0];
+  const nextPost = notes[notes.indexOf(note) + 1] ?? undefined;
 
   return (
     <>
@@ -54,7 +54,7 @@ export default async function Note({ params }: Params) {
         <MailButton />
       </List>
       <List className="justify-between">
-        <PageLink href={PATH.POSTS} />
+        <PageLink href={PATH.NOTES} />
         {nextPost && (
           <PageLink href={nextPost.permalink} className="w-2/3 text-right">
             {nextPost.title}

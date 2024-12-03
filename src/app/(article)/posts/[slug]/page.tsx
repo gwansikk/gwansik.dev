@@ -37,7 +37,7 @@ export default async function Post({ params }: Params) {
     notFound();
   }
 
-  const nextPost = posts[posts.indexOf(post) + 1] || posts[0];
+  const nextPost = posts[posts.indexOf(post) + 1] ?? undefined;
 
   return (
     <>
