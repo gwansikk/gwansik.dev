@@ -33,8 +33,8 @@ export default function Home() {
         <p>
           개발 생태계에 영향력을 주고자 오픈 소스 활동을 하고 있어요. 현재{' '}
           <Anchor href="https://suspensive.org">Suspensive</Anchor>의 관리자로
-          라이브러리를 개발하고 있으며 TanStack Query, pnpm 등 여러 프로젝트에
-          기여한 경험이 있습니다.
+          라이브러리를 개발하고 있으며 TanStack Query, es-toolkit, pnpm 등 여러
+          프로젝트에 기여한 경험이 있습니다.
         </p>
       </section>
       <Section title="해당 프로젝트를 관리하거나 기여하고 있어요.">
