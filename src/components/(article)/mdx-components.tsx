@@ -23,7 +23,9 @@ export const mdxComponents: MDXComponents = {
   ul: (props) => (
     <ul className="list-inside list-disc leading-loose" {...props} />
   ),
-  li: (props) => <li className="truncate" {...props} />,
+  ol: (props) => (
+    <ol className="list-inside list-decimal leading-loose" {...props} />
+  ),
   blockquote: (props) => (
     <blockquote
       className="rounded-xl bg-zinc-100 p-4 dark:bg-zinc-900"
