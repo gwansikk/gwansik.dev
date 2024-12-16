@@ -1,10 +1,13 @@
-import { type Post as TPost, posts } from '#content';
+import type { Post as TPost } from '#content';
 import Link from 'next/link';
 import Title from '@/components/title';
 import Description from '@/components/description';
 import ArticleMetadata from '@/components/(article)/article-metadata';
 import PageLink from '@/components/page-link';
 import type { Metadata } from 'next';
+import { getPosts } from '@/data/velite-data-accessor';
+
+const POSTS = getPosts();
 
 export const metadata: Metadata = {
   title: 'Posts | Gwansik Kim',
@@ -18,7 +21,7 @@ export default function Posts() {
         <Description>경험</Description>
       </header>
       <ul className="space-y-6">
-        {posts.map((post) => (
+        {POSTS.map((post) => (
           <Post key={post.slug} post={post} />
         ))}
       </ul>
