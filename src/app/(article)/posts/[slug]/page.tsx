@@ -1,4 +1,3 @@
-import { posts } from '#content';
 import { MDXContent } from '@/components/(article)/mdx-content';
 import { notFound } from 'next/navigation';
 import Title from '@/components/title';
@@ -9,6 +8,9 @@ import { PATH } from '@/constants/path';
 import List from '@/components/list';
 import CopyButton from '@/components/(article)/copy-button';
 import MailButton from '@/components/(article)/mail-button';
+import { getPosts } from '@/data/velite-data-accessor';
+
+const POSTS = getPosts();
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -16,7 +18,7 @@ interface Params {
 
 export async function generateMetadata({ params }: Params) {
   const { slug } = await params;
-  const post = posts.find((i) => i.slug === slug);
+  const post = POSTS.find((i) => i.slug === slug);
 
   if (!post) {
     return;
@@ -26,18 +28,18 @@ export async function generateMetadata({ params }: Params) {
 }
 
 export async function generateStaticParams() {
-  return posts.map((post) => ({ slug: post.slug }));
+  return POSTS.map((post) => ({ slug: post.slug }));
 }
 
 export default async function Post({ params }: Params) {
   const { slug } = await params;
-  const post = posts.find((i) => i.slug === slug);
+  const post = POSTS.find((i) => i.slug === slug);
 
   if (!post) {
     notFound();
   }
 
-  const nextPost = posts[posts.indexOf(post) + 1] ?? undefined;
+  const nextPost = POSTS[POSTS.indexOf(post) + 1] ?? undefined;
 
   return (
     <>
