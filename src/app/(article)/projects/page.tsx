@@ -1,5 +1,4 @@
 import Title from '@/components/title';
-import Description from '@/components/description';
 import type { Metadata } from 'next';
 import PageLink from '@/components/page-link';
 
@@ -12,7 +11,6 @@ export default function Projects() {
     <>
       <header>
         <Title>Projects</Title>
-        <Description>작업</Description>
       </header>
       <PageLink />
     </>

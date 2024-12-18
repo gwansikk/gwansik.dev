@@ -1,7 +1,6 @@
 import type { Post as TPost } from '#content';
 import Link from 'next/link';
 import Title from '@/components/title';
-import Description from '@/components/description';
 import ArticleMetadata from '@/components/(article)/article-metadata';
 import PageLink from '@/components/page-link';
 import type { Metadata } from 'next';
@@ -18,7 +17,6 @@ export default function Posts() {
     <>
       <header>
         <Title>Posts</Title>
-        <Description>경험</Description>
       </header>
       <ul className="space-y-6">
         {POSTS.map((post) => (

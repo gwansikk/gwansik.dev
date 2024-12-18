@@ -1,5 +1,4 @@
 import Title from '@/components/title';
-import Description from '@/components/description';
 import PageLink from '@/components/page-link';
 import type { Metadata } from 'next';
 import { notes, type Note as TNote } from '#content';
@@ -15,7 +14,6 @@ export default function Notes() {
     <>
       <header>
         <Title>Notes</Title>
-        <Description>생각</Description>
       </header>
       <ul className="space-y-6">
         {notes.map((note) => (
