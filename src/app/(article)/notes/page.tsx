@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { notes, type Note as TNote } from '#content';
 import Link from 'next/link';
 import ArticleMetadata from '@/components/(article)/article-metadata';
+import { getReadingTime } from '@/utils/string';
 
 export const metadata: Metadata = {
   title: 'Notes | Gwansik Kim',
@@ -37,7 +38,7 @@ const Note = ({ note }: { note: TNote }) => {
           <span className="text-zinc-500">·</span>
           <ArticleMetadata
             date={note.date}
-            readingTime={note.metadata.readingTime}
+            readingTime={getReadingTime(note.content)}
           />
         </div>
       </Link>

@@ -25,6 +25,7 @@ export default defineConfig({
           date: s.isodate(),
           slug: s.slug('posts'),
           metadata: s.metadata(),
+          content: s.markdown(),
           code: s.mdx(),
         })
         .transform((data) => ({ ...data, permalink: `/posts/${data.slug}` })),
@@ -38,6 +39,7 @@ export default defineConfig({
           date: s.isodate(),
           slug: s.slug('notes'),
           metadata: s.metadata(),
+          content: s.markdown(),
           code: s.mdx(),
         })
         .transform((data) => ({ ...data, permalink: `/notes/${data.slug}` })),

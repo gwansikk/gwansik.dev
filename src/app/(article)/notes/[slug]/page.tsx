@@ -9,6 +9,7 @@ import { PATH } from '@/constants/path';
 import List from '@/components/list';
 import CopyButton from '@/components/(article)/copy-button';
 import MailButton from '@/components/(article)/mail-button';
+import { getReadingTime } from '@/utils/string';
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -45,7 +46,7 @@ export default async function Note({ params }: Params) {
         <Title>{note.title}</Title>
         <ArticleMetadata
           date={note.date}
-          readingTime={note.metadata.readingTime}
+          readingTime={getReadingTime(note.content)}
         />
       </header>
       <MDXContent code={note.code} components={mdxComponents} />
