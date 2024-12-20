@@ -49,4 +49,7 @@ export const mdxComponents: MDXComponents = {
       alt={alt as string}
     />
   ),
+  hr: (props) => (
+    <hr className="m-auto h-20 w-1 border-none bg-zinc-500" {...props} />
+  ),
 };
