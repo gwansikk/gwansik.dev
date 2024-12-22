@@ -24,7 +24,7 @@ const Nav = () => {
       <NavButton href={PATH.ROOT}>gwansikk</NavButton>
       <div className="flex items-center gap-4">
         <NavButton href={PATH.POSTS}>Posts</NavButton>
-        <NavButton href={PATH.PROJECTS}>Projects</NavButton>
+        {/* <NavButton href={PATH.PROJECTS}>Projects</NavButton> */}
         <NavButton href={PATH.NOTES}>Notes</NavButton>
         <Link
           href={PATH.GITHUB}
