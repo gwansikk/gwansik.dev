@@ -1,6 +1,7 @@
 'use client';
 
 import Button from '@/components/button';
+import { HiOutlineLink } from 'react-icons/hi';
 
 const CopyButton = () => {
   const handleCopyClick = async () => {
@@ -8,7 +9,11 @@ const CopyButton = () => {
     alert('해당 URL이 클립보드에 복사됐어요.');
   };
 
-  return <Button onClick={handleCopyClick}>공유하기</Button>;
+  return (
+    <Button icon={<HiOutlineLink />} onClick={handleCopyClick}>
+      공유하기
+    </Button>
+  );
 };
 
 export default CopyButton;
