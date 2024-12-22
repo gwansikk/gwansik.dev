@@ -38,7 +38,10 @@ export const mdxComponents: MDXComponents = {
     </a>
   ),
   code: (props) => (
-    <code className="rounded-md bg-zinc-100 px-1 dark:bg-zinc-900" {...props} />
+    <code
+      className="rounded-md border-b bg-zinc-100 px-1 dark:border-zinc-700 dark:bg-zinc-900"
+      {...props}
+    />
   ),
   img: ({ src, alt }) => (
     <Image
