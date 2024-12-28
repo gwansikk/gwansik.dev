@@ -1,3 +1,4 @@
+import { getImageMetaData } from '@/utils/image';
 import type { MDXComponents } from 'mdx/types';
 import Image from 'next/image';
 
@@ -43,15 +44,21 @@ export const mdxComponents: MDXComponents = {
       {...props}
     />
   ),
-  img: ({ src, alt }) => (
-    <Image
-      className="rounded-2xl border dark:border-black"
-      width={640}
-      height={360}
-      src={src as string}
-      alt={alt as string}
-    />
-  ),
+  img: async ({ src, alt }) => {
+    const props = await getImageMetaData(src);
+
+    return (
+      <Image
+        className="rounded-2xl border dark:border-black"
+        src={props.src}
+        alt={alt}
+        width={props.width ?? 640}
+        height={props.height ?? 428}
+        placeholder="blur"
+        blurDataURL={props.blurDataURL}
+      />
+    );
+  },
   hr: (props) => (
     <hr className="m-auto h-20 w-1 border-none bg-zinc-500" {...props} />
   ),
