@@ -21,7 +21,9 @@ const NavButton = ({ href, children }: Props) => {
 const Nav = () => {
   return (
     <nav className="container flex items-center justify-between py-2">
-      <NavButton href={PATH.ROOT}>gwansikk</NavButton>
+      <Link href={PATH.ROOT} className="text-zinc-800 dark:text-zinc-200">
+        gwansikk
+      </Link>
       <div className="flex items-center gap-4">
         <NavButton href={PATH.POSTS}>Posts</NavButton>
         {/* <NavButton href={PATH.PROJECTS}>Projects</NavButton> */}
