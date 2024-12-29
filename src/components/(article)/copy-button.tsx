@@ -4,9 +4,15 @@ import Button from '@/components/button';
 import { HiOutlineLink } from 'react-icons/hi';
 
 const CopyButton = () => {
-  const handleCopyClick = async () => {
-    await navigator.clipboard.writeText(window.location.href);
-    alert('해당 URL이 클립보드에 복사됐어요.');
+  const handleCopyClick = () => {
+    navigator.clipboard
+      .writeText(window.location.href)
+      .then(() => {
+        alert('링크가 복사되었어요.');
+      })
+      .catch(() => {
+        alert('링크 복사에 실패했어요.');
+      });
   };
 
   return (
