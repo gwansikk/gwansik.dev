@@ -1,10 +1,13 @@
 import Title from '@/components/title';
 import PageLink from '@/components/page-link';
 import type { Metadata } from 'next';
-import { notes, type Note as TNote } from '#content';
+import type { Note as TNote } from '#content';
 import Link from 'next/link';
 import ArticleMetadata from '@/components/(article)/article-metadata';
 import { getReadingTime } from '@/utils/string';
+import { getNotes } from '@/data/velite-data-accessor';
+
+const NOTES = getNotes();
 
 export const metadata: Metadata = {
   title: 'Notes | Gwansik Kim',
@@ -17,7 +20,7 @@ export default function Notes() {
         <Title>Notes</Title>
       </header>
       <ul className="space-y-6">
-        {notes.map((note) => (
+        {NOTES.map((note) => (
           <Note key={note.slug} note={note} />
         ))}
       </ul>

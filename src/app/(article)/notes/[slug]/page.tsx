@@ -1,4 +1,3 @@
-import { notes } from '#content';
 import { MDXContent } from '@/components/(article)/mdx-content';
 import { notFound } from 'next/navigation';
 import Title from '@/components/title';
@@ -10,6 +9,9 @@ import List from '@/components/list';
 import CopyButton from '@/components/(article)/copy-button';
 import MailButton from '@/components/(article)/mail-button';
 import { getReadingTime } from '@/utils/string';
+import { getNotes } from '@/data/velite-data-accessor';
+
+const NOTES = getNotes();
 
 interface Params {
   params: Promise<{ slug: string }>;
@@ -17,7 +19,7 @@ interface Params {
 
 export async function generateMetadata({ params }: Params) {
   const { slug } = await params;
-  const note = notes.find((i) => i.slug === slug);
+  const note = NOTES.find((i) => i.slug === slug);
 
   if (!note) {
     return;
@@ -27,18 +29,18 @@ export async function generateMetadata({ params }: Params) {
 }
 
 export async function generateStaticParams() {
-  return notes.map((note) => ({ slug: note.slug }));
+  return NOTES.map((note) => ({ slug: note.slug }));
 }
 
 export default async function Note({ params }: Params) {
   const { slug } = await params;
-  const note = notes.find((i) => i.slug === slug);
+  const note = NOTES.find((i) => i.slug === slug);
 
   if (!note) {
     notFound();
   }
 
-  const nextPost = notes[notes.indexOf(note) + 1] ?? undefined;
+  const nextPost = NOTES[NOTES.indexOf(note) + 1] ?? undefined;
 
   return (
     <>
