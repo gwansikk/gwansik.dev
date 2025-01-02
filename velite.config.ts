@@ -24,7 +24,6 @@ export default defineConfig({
           title: s.string(),
           date: s.isodate(),
           slug: s.slug('posts'),
-          metadata: s.metadata(),
           content: s.markdown(),
           code: s.mdx(),
         })
@@ -38,7 +37,6 @@ export default defineConfig({
           title: s.string(),
           date: s.isodate(),
           slug: s.slug('notes'),
-          metadata: s.metadata(),
           content: s.markdown(),
           code: s.mdx(),
         })
