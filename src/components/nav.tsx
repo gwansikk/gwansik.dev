@@ -24,7 +24,7 @@ const Nav = () => {
     <nav className="container flex h-[40px] items-center justify-between">
       <Link
         href={PATH.ROOT}
-        className="flex items-center gap-1 text-zinc-800 dark:text-zinc-200"
+        className="flex items-center gap-1.5 text-zinc-800 dark:text-zinc-200"
       >
         <Image
           className="rounded-full"
@@ -35,10 +35,11 @@ const Nav = () => {
           priority
         />
         <Image
+          className="dark:invert"
           src="/sign.webp"
           alt="gwansikk-sign"
-          width={42}
-          height={24}
+          width={46}
+          height={26}
           priority
         />
       </Link>
