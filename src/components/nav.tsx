@@ -27,6 +27,7 @@ const Nav = () => {
         className="flex items-center gap-1 text-zinc-800 dark:text-zinc-200"
       >
         <Image
+          className="rounded-full"
           src="/profile.webp"
           alt="gwansikk-profile"
           width={32}
