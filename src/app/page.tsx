@@ -23,8 +23,8 @@ export default function Home() {
       <section className="space-y-6">
         <p>안녕하세요, 엔지니어 김관식입니다.</p>
         <p>
-          저는 TypeScript 기반으로 Node.js 런타임 환경에서 프로덕트를 개발하며,
-          풀타임 작업 외에는 오픈 소스 개발 활동을 하고 있습니다.
+          저는 TypeScript 기반으로 Node.js 런타임 환경에서 비즈니스를 실현하며,
+          풀타임 작업 외에는 오픈소스 개발 활동을 하고 있습니다.
         </p>
         <p>
           주변에서 겪는 문제를 기술로 해결하고자 창업과 개발을 시작했습니다.
@@ -33,10 +33,10 @@ export default function Home() {
           중요하게 생각합니다.
         </p>
         <p>
-          개발 생태계에 영향력을 주고자 오픈 소스에 큰 관심을 가지고 있습니다.
+          개발 생태계에 영향력을 주고자 오픈소스에 큰 관심을 가지고 있습니다.
           현재 <Anchor href="https://suspensive.org">Suspensive</Anchor>의
           관리자로 라이브러리를 개발하고 있으며 TanStack Query, es-toolkit, pnpm
-          등 여러 프로젝트에 기여한 경험이 있습니다.
+          등 여러 프로젝트에 기여하고 있습니다.
         </p>
         <p>
           더 이야기를 나누고 싶다면{' '}
