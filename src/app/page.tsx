@@ -48,6 +48,13 @@ export default function Home() {
           감사합니다.
         </p>
       </section>
+      <Section title="최근에 작성한 포스트예요.">
+        {POSTS.map((post) => (
+          <List key={post.slug}>
+            <Anchor href={post.permalink}>{post.title}</Anchor>
+          </List>
+        ))}
+      </Section>
       <Section title="해당 프로젝트를 관리하거나 기여하고 있어요.">
         <List>
           <Anchor href="https://suspensive.org">Suspensive</Anchor>
@@ -93,13 +100,6 @@ export default function Home() {
             FEConf 2024 Lightning Talk - 오픈소스 기여, 어렵지 않아요!
           </Anchor>
         </List>
-      </Section>
-      <Section title="최근에 작성한 포스트예요.">
-        {POSTS.map((post) => (
-          <List key={post.slug}>
-            <Anchor href={post.permalink}>{post.title}</Anchor>
-          </List>
-        ))}
       </Section>
     </>
   );
