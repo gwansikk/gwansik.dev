@@ -17,6 +17,13 @@ const pretendard = localFont({
 export const metadata: Metadata = {
   title: 'Gwansik Kim',
   description: 'Frontend Engineer Blog',
+  metadataBase: new URL('https://www.gwansik.dev'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    images: '/opengraph-image.png',
+  },
 };
 
 export default function RootLayout({
