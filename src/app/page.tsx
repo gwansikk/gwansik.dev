@@ -21,7 +21,7 @@ export default function Home() {
         <h2 className="text-zinc-500">Frontend Engineer</h2>
       </header>
       <section className="space-y-6">
-        <p>안녕하세요, 엔지니어 김관식입니다.</p>
+        <p>안녕하세요, 개발자 김관식입니다.</p>
         <p>
           저는 TypeScript 기반으로 Node.js 런타임 환경에서 비즈니스를 실현하며,
           풀타임 작업 외에는 오픈소스 개발 활동을 하고 있습니다.
