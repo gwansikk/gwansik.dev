@@ -10,6 +10,7 @@ import {
   SiX,
 } from 'react-icons/si';
 import { getPosts } from '@/data/velite-data-accessor';
+import Sponsor from '@/components/sponsor';
 
 const POSTS = getPosts().slice(0, 2);
 
@@ -49,8 +50,6 @@ export default function Home() {
             gwansik.kim@gwansik.dev
           </Anchor>
           로 언제든지 연락 주세요.
-          <br />
-          감사합니다.
         </p>
       </section>
       <Section title="최근에 작성한 포스트예요">
@@ -104,6 +103,18 @@ export default function Home() {
           <Anchor href="https://www.gwansik.dev/posts/feconf-2024">
             FEConf 2024 Lightning Talk - 오픈소스 기여, 어렵지 않아요!
           </Anchor>
+        </List>
+      </Section>
+      <Section title="후원해 주셔서 감사합니다">
+        <List>
+          <Sponsor
+            src="https://avatars.githubusercontent.com/u/147500032?s=70&v=4"
+            name="love1ace"
+          />
+          <Sponsor
+            src="https://avatars.githubusercontent.com/u/85067003?s=70&v=4"
+            name="limehee"
+          />
         </List>
       </Section>
     </>
