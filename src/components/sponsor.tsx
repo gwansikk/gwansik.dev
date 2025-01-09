@@ -9,6 +9,7 @@ interface Props {
 const Sponsor = ({ src, name }: Props) => {
   return (
     <Link
+      className="flex flex-col items-center gap-1 text-xs"
       href={`https://github.com/${name}`}
       target="_blank"
       rel="noopener noreferrer"
@@ -21,6 +22,7 @@ const Sponsor = ({ src, name }: Props) => {
         alt={name}
         priority
       />
+      <span>{name}</span>
     </Link>
   );
 };
