@@ -1,3 +1,3 @@
 export function getReadingTime(content: string): number {
-  return Math.floor(content.split(' ').length / 250) || 1;
+  return Math.max(Math.floor(content.split(' ').length / 250), 1);
 }
