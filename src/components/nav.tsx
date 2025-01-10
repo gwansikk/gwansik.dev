@@ -28,10 +28,10 @@ const Nav = () => {
       >
         <Image
           className="rounded-full"
-          src="/profile.webp"
+          src="https://avatars.githubusercontent.com/u/39869096?s=70&v=4"
           alt="gwansikk-profile"
-          width={32}
-          height={32}
+          width={36}
+          height={36}
           priority
         />
         <Image
