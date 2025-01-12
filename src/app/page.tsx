@@ -33,11 +33,8 @@ export default function Home() {
           아이디어와 성장은 개발 생태계에서 비롯된다고 생각하여 오픈 소스에
           관심이 많습니다. 현재{' '}
           <Anchor href="https://suspensive.org">Suspensive</Anchor>의 관리자로
-          라이브러리를 개발하고 있으며{' '}
-          <Anchor href="https://github.com/TanStack/query/issues?q=involves%3Agwansikk">
-            TanStack Query
-          </Anchor>
-          , es-toolkit, pnpm 등 여러 프로젝트에 기여하고 있습니다.
+          라이브러리를 개발하고 있으며 TanStack Query, es-toolkit, pnpm 등 여러
+          프로젝트에 기여하고 있습니다.
         </p>
         <p>
           혁신은 더하는 것보다 빼는 것에서 시작된다고 믿습니다. 복잡한 것보단
@@ -100,8 +97,13 @@ export default function Home() {
           </Anchor>
         </List>
         <List>
-          <Anchor href="https://www.gwansik.dev/posts/feconf-2024">
-            FEConf 2024 Lightning Talk - 오픈소스 기여, 어렵지 않아요!
+          <Anchor href="https://drive.google.com/file/d/1hzv8uhHzSomesRgs6HpPGWKnaHNkdIT0/view">
+            DEPROCON - 오픈 소스 기여부터 관리까지
+          </Anchor>
+        </List>
+        <List>
+          <Anchor href="/posts/feconf-2024">
+            FEConf 2024 Lightning Talk - 오픈 소스 기여, 어렵지 않아요!
           </Anchor>
         </List>
       </Section>
