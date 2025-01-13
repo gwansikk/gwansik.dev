@@ -11,7 +11,6 @@ import {
 } from 'react-icons/si';
 import { getPosts } from '@/data/velite-data-accessor';
 import Sponsor from '@/components/sponsor';
-import Image from 'next/image';
 
 const POSTS = getPosts().slice(0, 2);
 
