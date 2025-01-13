@@ -98,7 +98,7 @@ export default function Home() {
         </List>
         <List>
           <Anchor href="https://drive.google.com/file/d/1hzv8uhHzSomesRgs6HpPGWKnaHNkdIT0/view">
-            DEPROCON - 오픈 소스 기여부터 관리까지
+            DEPROCON 25 - 오픈 소스 기여부터 관리까지
           </Anchor>
         </List>
         <List>
