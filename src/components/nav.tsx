@@ -26,14 +26,14 @@ const Nav = () => {
         href={PATH.ROOT}
         className="flex items-center gap-1.5 text-zinc-800 dark:text-zinc-200"
       >
-        <Image
+        {/* <Image
           className="rounded-full"
           src="https://avatars.githubusercontent.com/u/39869096?s=70&v=4"
           alt="gwansikk-profile"
           width={36}
           height={36}
           priority
-        />
+        /> */}
         <Image
           className="dark:invert"
           src="/sign.webp"
