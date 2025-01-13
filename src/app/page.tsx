@@ -11,6 +11,7 @@ import {
 } from 'react-icons/si';
 import { getPosts } from '@/data/velite-data-accessor';
 import Sponsor from '@/components/sponsor';
+import Image from 'next/image';
 
 const POSTS = getPosts().slice(0, 2);
 
@@ -38,8 +39,8 @@ export default function Home() {
         </p>
         <p>
           혁신은 더하는 것보다 빼는 것에서 시작된다고 믿습니다. 복잡한 것보단
-          단순함을 좋아하며, 단순하면서도 잘 만들어진 프로덕트에서 큰 매력과
-          성취감을 느낍니다.
+          단순함을 좋아하며, 단순하면서도 정교하게 만들어진 프로덕트에서 큰
+          매력을 느낍니다.
         </p>
         <p>
           더 이야기를 나누고 싶다면{' '}
