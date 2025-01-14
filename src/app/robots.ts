@@ -1,3 +1,4 @@
+import { BASE_URL } from '@/constants/path';
 import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
@@ -8,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://https://www.gwansik.dev/sitemap.xml',
-    host: 'https://www.gwansik.dev',
+    sitemap: `${BASE_URL}/sitemap.xml`,
+    host: BASE_URL,
   };
 }

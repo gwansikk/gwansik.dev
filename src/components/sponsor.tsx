@@ -20,6 +20,7 @@ const Sponsor = ({ src, name }: Props) => {
         className="size-9 rounded-full"
         src={src}
         alt={name}
+        title="sponsor"
         priority
       />
       <span>{name}</span>

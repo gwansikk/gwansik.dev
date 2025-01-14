@@ -37,7 +37,8 @@ const Nav = () => {
         <Image
           className="dark:invert"
           src="/sign.webp"
-          alt="gwansikk-sign"
+          alt="gwansikk's sign"
+          title="sign"
           width={46}
           height={26}
           priority

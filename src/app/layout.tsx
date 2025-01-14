@@ -5,6 +5,7 @@ import Footer from '@/components/footer';
 
 import '../styles/globals.css';
 import { Provider } from './provider';
+import { BASE_URL } from '@/constants/path';
 
 const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -14,13 +15,18 @@ const pretendard = localFont({
 
 export const metadata: Metadata = {
   title: 'Gwansik Kim',
-  description: 'Frontend Engineer Blog',
-  metadataBase: new URL('https://www.gwansik.dev'),
+  description: 'Frontend Engineer',
+  metadataBase: new URL(BASE_URL),
   alternates: {
     canonical: '/',
   },
   openGraph: {
+    type: 'website',
+    url: BASE_URL,
     images: '/opengraph-image.png',
+  },
+  twitter: {
+    site: '@site',
   },
 };
 
