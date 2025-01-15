@@ -10,7 +10,7 @@ import { getNotes } from '@/data/velite-data-accessor';
 const NOTES = getNotes();
 
 export const metadata: Metadata = {
-  title: 'Notes | Gwansik Kim',
+  title: 'Notes',
 };
 
 export default function Notes() {

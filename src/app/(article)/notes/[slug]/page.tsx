@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Params) {
     return;
   }
 
-  return { title: `${note.title} | Gwansik Kim` };
+  return { title: note.title };
 }
 
 export async function generateStaticParams() {

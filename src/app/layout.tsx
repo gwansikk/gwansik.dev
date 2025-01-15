@@ -14,8 +14,11 @@ const pretendard = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Gwansik Kim',
-  description: 'Frontend Engineer',
+  title: {
+    template: '%s | Gwansik Kim',
+    default: 'Gwansik Kim',
+  },
+  description: "Gwansikk's Blog",
   metadataBase: new URL(BASE_URL),
   alternates: {
     canonical: '/',

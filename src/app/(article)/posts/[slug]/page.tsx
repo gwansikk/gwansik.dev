@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Params) {
     return;
   }
 
-  return { title: `${post.title} | Gwansik Kim` };
+  return { title: post.title };
 }
 
 export async function generateStaticParams() {

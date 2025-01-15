@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import PageLink from '@/components/page-link';
 
 export const metadata: Metadata = {
-  title: 'Project | Gwansik Kim',
+  title: 'Project',
 };
 
 export default function Projects() {

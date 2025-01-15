@@ -10,7 +10,7 @@ import { getReadingTime } from '@/utils/string';
 const POSTS = getPosts();
 
 export const metadata: Metadata = {
-  title: 'Posts | Gwansik Kim',
+  title: 'Posts',
 };
 
 export default function Posts() {
