@@ -19,8 +19,8 @@ const Sponsor = ({ src, name }: Props) => {
         height={36}
         className="size-9 rounded-full"
         src={src}
-        alt={name}
-        title="sponsor"
+        alt={`${name}'s avatar`}
+        title={`sponsor by ${name}`}
         priority
       />
       <span>{name}</span>

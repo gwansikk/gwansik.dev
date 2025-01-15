@@ -29,7 +29,7 @@ const Nav = () => {
         {/* <Image
           className="rounded-full"
           src="https://avatars.githubusercontent.com/u/39869096?s=70&v=4"
-          alt="gwansikk-profile"
+          alt="gwansikk's avatar"
           width={36}
           height={36}
           priority
