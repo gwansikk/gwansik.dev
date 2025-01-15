@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: '%s | Gwansik Kim',
     default: 'Gwansik Kim',
   },
-  description: "Gwansikk's Blog",
+  description: "Gwansik Kim's Blog",
   metadataBase: new URL(BASE_URL),
   alternates: {
     canonical: '/',
