@@ -14,6 +14,17 @@ import Sponsor from '@/components/sponsor';
 
 const POSTS = getPosts().slice(0, 2);
 
+const SPONSORS = [
+  {
+    src: 'https://avatars.githubusercontent.com/u/147500032?s=70&v=4',
+    name: 'love1ace',
+  },
+  {
+    src: 'https://avatars.githubusercontent.com/u/85067003?s=70&v=4',
+    name: 'limehee',
+  },
+] as const;
+
 export default function Home() {
   return (
     <>
@@ -109,14 +120,9 @@ export default function Home() {
       </Section>
       <Section title="후원해 주셔서 감사합니다">
         <List>
-          <Sponsor
-            src="https://avatars.githubusercontent.com/u/147500032?s=70&v=4"
-            name="love1ace"
-          />
-          <Sponsor
-            src="https://avatars.githubusercontent.com/u/85067003?s=70&v=4"
-            name="limehee"
-          />
+          {SPONSORS.map((sponsor) => (
+            <Sponsor key={sponsor.name} {...sponsor} />
+          ))}
         </List>
       </Section>
     </>
