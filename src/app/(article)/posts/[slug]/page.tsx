@@ -28,8 +28,9 @@ export async function generateMetadata({ params }: Params) {
   return {
     title: post.title,
     openGraph: {
-      url: new URL(post.permalink, BASE_URL).toString(),
+      type: 'website',
       siteName: 'Gwansik Kim',
+      url: new URL(post.permalink, BASE_URL).toString(),
       images: '/opengraph-image.png',
     },
   };
