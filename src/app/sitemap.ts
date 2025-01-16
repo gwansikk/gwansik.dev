@@ -14,13 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: BASE_URL + PATH.POSTS,
+      url: new URL(PATH.POSTS, BASE_URL).toString(),
       lastModified: new Date(latestPost.date),
       changeFrequency: 'monthly',
       priority: 0.8,
     },
     {
-      url: BASE_URL + PATH.NOTES,
+      url: new URL(PATH.NOTES, BASE_URL).toString(),
       lastModified: new Date(latestNote.date),
       changeFrequency: 'monthly',
       priority: 0.5,
