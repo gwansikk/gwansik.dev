@@ -4,7 +4,7 @@ import Title from '@/components/title';
 import ArticleMetadata from '@/components/(article)/article-metadata';
 import { mdxComponents } from '@/components/(article)/mdx-components';
 import PageLink from '@/components/page-link';
-import { PATH } from '@/constants/path';
+import { PATH, BASE_URL } from '@/constants/path';
 import List from '@/components/list';
 import CopyButton from '@/components/(article)/copy-button';
 import MailButton from '@/components/(article)/mail-button';
@@ -25,7 +25,12 @@ export async function generateMetadata({ params }: Params) {
     return;
   }
 
-  return { title: post.title };
+  return {
+    title: post.title,
+    openGraph: {
+      url: new URL(post.permalink, BASE_URL).toString(),
+    },
+  };
 }
 
 export async function generateStaticParams() {
