@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
+    siteName: 'Gwansik Kim',
     url: BASE_URL,
     images: '/opengraph-image.png',
   },
