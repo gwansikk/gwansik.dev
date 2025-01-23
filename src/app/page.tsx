@@ -30,10 +30,12 @@ export default function Home() {
     <>
       <header>
         <Title>Gwansik Kim</Title>
-        <h2 className="text-zinc-500">Frontend Engineer</h2>
+        <h2 className="text-zinc-500">
+          Frontend Engineer, Open Source Enthusiast
+        </h2>
       </header>
       <section className="space-y-6">
-        <p>개발자 김관식입니다.</p>
+        <p>안녕하세요, 개발자 김관식입니다.</p>
         <p>
           주변에서 겪는 문제를 기술로 해결하고자 창업과 개발을 시작했습니다.
           문제를 해결하는 프로파일러처럼 주도적으로 분석하고 적절한 해답을
@@ -41,8 +43,8 @@ export default function Home() {
           프로덕트를 성공으로 연결시키는 데에 집중합니다.
         </p>
         <p>
-          아이디어와 성장은 개발 생태계에서 비롯된다고 생각하여 오픈 소스에
-          관심이 많습니다. 현재{' '}
+          아이디어와 솔루션은 개발 생태계에서 영감을 받는다고 생각하여 오픈
+          소스에 관심이 많습니다. 현재{' '}
           <Anchor href="https://suspensive.org">Suspensive</Anchor>의 관리자로
           라이브러리를 개발하고 있으며 TanStack Query, es-toolkit, pnpm 등 여러
           프로젝트에 기여하고 있습니다.
