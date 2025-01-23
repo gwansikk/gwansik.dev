@@ -43,8 +43,8 @@ export default function Home() {
           프로덕트를 성공으로 연결시키는 데에 집중합니다.
         </p>
         <p>
-          아이디어와 솔루션은 개발 생태계에서 영감을 받는다고 생각하여 오픈
-          소스에 관심이 많습니다. 현재{' '}
+          아이디어와 솔루션은 개발 생태계에서 영감을 얻어 오픈 소스에 관심이
+          많습니다. 현재{' '}
           <Anchor href="https://suspensive.org">Suspensive</Anchor>의 관리자로
           라이브러리를 개발하고 있으며 TanStack Query, es-toolkit, pnpm 등 여러
           프로젝트에 기여하고 있습니다.
