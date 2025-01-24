@@ -4,7 +4,6 @@ import type { Metadata } from 'next';
 import type { Note as TNote } from '#content';
 import Link from 'next/link';
 import ArticleMetadata from '@/components/(article)/article-metadata';
-import { getReadingTime } from '@/utils/string';
 import { getNotes } from '@/data/velite-data-accessor';
 
 const NOTES = getNotes();
@@ -39,10 +38,7 @@ const Note = ({ note }: { note: TNote }) => {
         <p className="font-semibold">{note.title}</p>
         <div className="flex items-center gap-2 sm:justify-center">
           <span className="hidden text-zinc-500 sm:flex">·</span>
-          <ArticleMetadata
-            date={note.date}
-            readingTime={getReadingTime(note.content)}
-          />
+          <ArticleMetadata date={note.date} readingTime={note.readingTime} />
         </div>
       </Link>
     </li>

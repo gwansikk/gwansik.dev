@@ -9,7 +9,6 @@ import List from '@/components/list';
 import CopyButton from '@/components/(article)/copy-button';
 import MailButton from '@/components/(article)/mail-button';
 import { getPosts } from '@/data/velite-data-accessor';
-import { getReadingTime } from '@/utils/string';
 
 const POSTS = getPosts();
 
@@ -54,10 +53,7 @@ export default async function Post({ params }: Params) {
     <>
       <header>
         <Title>{post.title}</Title>
-        <ArticleMetadata
-          date={post.date}
-          readingTime={getReadingTime(post.content)}
-        />
+        <ArticleMetadata date={post.date} readingTime={post.readingTime} />
       </header>
       <MDXContent code={post.code} components={mdxComponents} />
       <List>

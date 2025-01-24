@@ -8,7 +8,6 @@ import { BASE_URL, PATH } from '@/constants/path';
 import List from '@/components/list';
 import CopyButton from '@/components/(article)/copy-button';
 import MailButton from '@/components/(article)/mail-button';
-import { getReadingTime } from '@/utils/string';
 import { getNotes } from '@/data/velite-data-accessor';
 
 const NOTES = getNotes();
@@ -54,10 +53,7 @@ export default async function Note({ params }: Params) {
     <>
       <header>
         <Title>{note.title}</Title>
-        <ArticleMetadata
-          date={note.date}
-          readingTime={getReadingTime(note.content)}
-        />
+        <ArticleMetadata date={note.date} readingTime={note.readingTime} />
       </header>
       <MDXContent code={note.code} components={mdxComponents} />
       <List>

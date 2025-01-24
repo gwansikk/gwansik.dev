@@ -5,7 +5,6 @@ import ArticleMetadata from '@/components/(article)/article-metadata';
 import PageLink from '@/components/page-link';
 import type { Metadata } from 'next';
 import { getPosts } from '@/data/velite-data-accessor';
-import { getReadingTime } from '@/utils/string';
 
 const POSTS = getPosts();
 
@@ -39,10 +38,7 @@ const Post = ({ post }: { post: TPost }) => {
         <p className="font-semibold">{post.title}</p>
         <div className="flex items-center gap-2 sm:justify-center">
           <span className="hidden text-zinc-500 sm:flex">·</span>
-          <ArticleMetadata
-            date={post.date}
-            readingTime={getReadingTime(post.content)}
-          />
+          <ArticleMetadata date={post.date} readingTime={post.readingTime} />
         </div>
       </Link>
     </li>
