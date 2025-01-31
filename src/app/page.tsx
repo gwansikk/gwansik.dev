@@ -14,7 +14,7 @@ import Sponsor from '@/components/sponsor';
 
 const POSTS = getPosts().slice(0, 2);
 
-const SPONSORS = [
+const SPONSORS: { src: string; name: string }[] = [
   {
     src: 'https://avatars.githubusercontent.com/u/147500032?s=70&v=4',
     name: 'love1ace',
@@ -51,8 +51,7 @@ export default function Home() {
         </p>
         <p>
           혁신은 더하는 것보다 빼는 것에서 시작된다고 믿습니다. 복잡한 것보단
-          단순함을 좋아하며, 단순하면서도 정교하게 프로덕트를 만들고자
-          노력합니다.
+          단순함을 좋아하며, 단순하면서도 정교하게 개발하고자 노력합니다.
         </p>
         <p>
           더 이야기를 나누고 싶다면{' '}

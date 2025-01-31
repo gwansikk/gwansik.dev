@@ -9,15 +9,15 @@ interface Props {
 const Sponsor = ({ src, name }: Props) => {
   return (
     <Link
-      className="flex flex-col items-center gap-1 text-xs"
+      className="flex flex-col items-center gap-1 text-sm"
       href={`https://github.com/${name}`}
       target="_blank"
       rel="noopener noreferrer"
     >
       <Image
-        width={36}
-        height={36}
-        className="size-9 rounded-full"
+        width={40}
+        height={40}
+        className="size-10 rounded-full"
         src={src}
         alt={`${name}'s avatar`}
         title={`sponsor by ${name}`}
