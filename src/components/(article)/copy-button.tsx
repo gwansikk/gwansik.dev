@@ -8,7 +8,12 @@ const SUCCESS_MESSAGE = '링크가 복사됐어요.';
 
 export default function CopyButton() {
   const handleCopyClick = () => {
-    navigator.clipboard.writeText(window.location.href).then(() => {
+    const url = new URL(window.location.href);
+    url.searchParams.set('utm_source', 'share');
+    url.searchParams.set('utm_medium', 'social');
+    url.searchParams.set('utm_campaign', 'blog-share');
+
+    navigator.clipboard.writeText(url.toString()).then(() => {
       toast.success(SUCCESS_MESSAGE);
     });
   };
