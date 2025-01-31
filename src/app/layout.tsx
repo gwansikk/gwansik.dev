@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import Nav from '@/components/nav';
 import Footer from '@/components/footer';
-
-import '../styles/globals.css';
-import { Provider } from './provider';
+import { Provider } from '../components/provider';
 import { BASE_URL } from '@/constants/path';
+import '../styles/globals.css';
+import { Toaster } from 'sonner';
 
 const pretendard = localFont({
   src: './fonts/PretendardVariable.woff2',
@@ -48,6 +48,7 @@ export default function RootLayout({
             <article className="space-y-8 py-14">{children}</article>
           </main>
           <Footer />
+          <Toaster position="top-center" richColors />
         </body>
       </Provider>
     </html>

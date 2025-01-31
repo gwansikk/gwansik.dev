@@ -2,17 +2,15 @@
 
 import Button from '@/components/button';
 import { HiOutlineLink } from 'react-icons/hi';
+import { toast } from 'sonner';
 
-const CopyButton = () => {
+const SUCCESS_MESSAGE = '링크가 복사됐어요.';
+
+export default function CopyButton() {
   const handleCopyClick = () => {
-    navigator.clipboard
-      .writeText(window.location.href)
-      .then(() => {
-        alert('링크가 복사되었어요.');
-      })
-      .catch(() => {
-        alert('링크 복사에 실패했어요.');
-      });
+    navigator.clipboard.writeText(window.location.href).then(() => {
+      toast.success(SUCCESS_MESSAGE);
+    });
   };
 
   return (
@@ -20,6 +18,4 @@ const CopyButton = () => {
       공유하기
     </Button>
   );
-};
-
-export default CopyButton;
+}
