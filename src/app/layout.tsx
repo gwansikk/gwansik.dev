@@ -48,7 +48,7 @@ export default function RootLayout({
             <article className="space-y-8 py-14">{children}</article>
           </main>
           <Footer />
-          <Toaster position="top-center" richColors />
+          <Toaster position="top-center" />
         </body>
       </Provider>
     </html>
