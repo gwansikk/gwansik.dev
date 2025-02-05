@@ -70,6 +70,7 @@ export default function Home() {
       </Section>
       <Section title="해당 프로젝트를 관리하거나 기여하고 있어요">
         <List>
+          <Anchor href="https://github.com/offlegacy">OffLegacy</Anchor>
           <Anchor href="https://suspensive.org">Suspensive</Anchor>
           <Anchor href="https://query-adaptor.gwansik.dev">
             Query Adaptor
