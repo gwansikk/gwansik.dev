@@ -11,3 +11,9 @@ export function getNotes(): Note[] {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
 }
+
+export function getArticle() {
+  return [...posts, ...notes].sort((a, b) => {
+    return new Date(b.date).getTime() - new Date(a.date).getTime();
+  });
+}

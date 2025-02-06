@@ -9,10 +9,10 @@ import {
   SiLinkedin,
   SiX,
 } from 'react-icons/si';
-import { getPosts } from '@/data/velite-data-accessor';
+import { getArticle } from '@/data/velite-data-accessor';
 import Sponsor from '@/components/sponsor';
 
-const POSTS = getPosts().slice(0, 2);
+const ARTICLES = getArticle().slice(0, 3);
 
 const SPONSORS: { src: string; name: string }[] = [
   {
@@ -62,7 +62,7 @@ export default function Home() {
         </p>
       </section>
       <Section title="최근에 작성한 포스트예요">
-        {POSTS.map((post) => (
+        {ARTICLES.map((post) => (
           <List key={post.slug}>
             <Anchor href={post.permalink}>{post.title}</Anchor>
           </List>
