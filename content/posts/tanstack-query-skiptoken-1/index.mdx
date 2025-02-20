@@ -153,7 +153,7 @@ useQueries를 이해하려면 먼저 useQuery에 대해 알아야 했고 선언�
 
 하지만 저는 기존 PR과 댓글에서 힌트를 얻을 수 있었습니다. `as const`, 즉 readonly 상태일 경우 정상적인 타입 추론이 가능하다면 내부적으로 readonly 상태로 만들어서 하면 되지 않을까라는 생각에 다시 시도해볼 수 있었습니다.
 
-```ts
+```ts {20}
 /**
  * QueriesOptions reducer recursively unwraps function arguments to infer/enforce type param
  */

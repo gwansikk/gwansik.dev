@@ -28,7 +28,7 @@ Documentation Framework는 README.md 혹은 Wiki와 같이 라이브러리의 �
 
 저는 라이브러리를 개발하면 항상 npm에 배포했어요. 이는 Node.js 생태계 라이브러리 개발자라면 필수적이라고 생각해요. 평소와 같이 라이브러리를 개발하고 배포하여 공식 문서를 작성하는 도중에 반복적으로 하는 일이 생겼어요. 그것은 바로 네비바(Navbar)에 NPM을 링크하는 아이콘을 생성하는 것입니다.
 
-```ts
+```ts title="config.mts"
 // config.mts의 socialLinks 타입
 interface SocialLink {
   icon: SocialLinkIcon;
@@ -57,7 +57,7 @@ VitePress에서는 `.vitepress/config.mts`에서 네비바에 있는 소셜 링�
 
 그래서 어쩔 수 없이 npm은 커스텀으로 추가하여 직접 사용해야 했어요. 공식 문서에서 소개된 것처럼 NPM의 SVG 코드를 가져와 직접 추가하는 방법뿐이었죠.
 
-```ts
+```ts {3-6}
 socialLinks: [
   {
     icon: {
@@ -108,7 +108,7 @@ socialLinks: [
 
 저의 번거로움의 절실함이 통했는지 혹은 NPM이 필요하다고 판단되었는지 따로 댓글(Comment)는 없었지만 `contribution welcome` 라벨로 승인을 받게 되었어요!
 
-```ts
+```ts {9}
 // theme-default/support/socialIcons.ts
 // types/default-theme.d.ts
 type SocialLinkIcon =
@@ -124,7 +124,7 @@ type SocialLinkIcon =
   | 'x';
 ```
 
-```ts
+```ts {4}
 // used under CC0 1.0 from https://simpleicons.org/
 export const icons = {
   // ... 기존 코드

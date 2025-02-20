@@ -24,7 +24,7 @@ Photo by Artem Beliaikin
 
 예시를 한 번 살펴봅시다, 간단한 비교를 위해 제 [zustand와 함께 작업하기](https://tkdodo.eu/blog/working-with-zustand)에서 나온 것과 비슷한 예시를 사용하겠습니다:
 
-```typescript
+```typescript title="example"
 import { createStore } from '@xstate/store';
 import { useSelector } from '@xstate/store/react';
 
@@ -71,7 +71,7 @@ export const useFish = () => useSelector(store, (state) => state.context.fish);
 
 업데이트 대해서 말하자면: 스토어에서 액션을 선택하지 않으면 어떻게 트랜지션을 트리거할 수 있을까요? `store.send`를 사용하면 간단합니다:
 
-```typescript
+```tsx title="transitions"
 function App() {
   const bears = useBears()
 

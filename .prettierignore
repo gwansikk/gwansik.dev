@@ -1,3 +1,5 @@
+*.mdx
+
 coverage
 .next
 public

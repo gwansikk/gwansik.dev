@@ -1,19 +1,29 @@
-import rehypeShiki from '@shikijs/rehype';
 import { defineConfig, s } from 'velite';
+import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers';
+import rehypeExpressiveCode from 'rehype-expressive-code';
+import { pluginCollapsibleSections } from '@expressive-code/plugin-collapsible-sections';
 
 function getReadingTime(content: string): number {
   return Math.max(Math.floor(content.split(' ').length / 250), 1);
 }
 
+/** @type {import('rehype-expressive-code').RehypeExpressiveCodeOptions} */
+const rehypeExpressiveCodeOptions = {
+  plugins: [pluginLineNumbers(), pluginCollapsibleSections()],
+};
+
 export default defineConfig({
   mdx: {
     rehypePlugins: [
       [
-        rehypeShiki,
+        rehypeExpressiveCode,
         {
-          themes: {
-            light: 'github-light',
-            dark: 'github-dark',
+          ...rehypeExpressiveCodeOptions,
+          styleOverrides: {
+            borderRadius: '1rem',
+            frames: {
+              shadowColor: 'transparent',
+            },
           },
         },
       ],
