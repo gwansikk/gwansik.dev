@@ -1,5 +1,5 @@
 import { BASE_URL, PATH } from '@/constants/path';
-import { getNotes, getPosts } from '@/data/velite-data-accessor';
+import { getNotes, getPosts } from '@/lib/dal';
 import type { MetadataRoute } from 'next';
 
 const latestPost = getPosts()[0];
@@ -22,6 +22,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: new URL(PATH.NOTES, BASE_URL).toString(),
       lastModified: new Date(latestNote.date),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: new URL(PATH.TALKS, BASE_URL).toString(),
+      // lastModified: new Date(latestNote.date), TODO
       changeFrequency: 'monthly',
       priority: 0.5,
     },

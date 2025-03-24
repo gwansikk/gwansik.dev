@@ -9,10 +9,11 @@ import {
   SiLinkedin,
   SiX,
 } from 'react-icons/si';
-import { getArticle } from '@/data/velite-data-accessor';
+import { getArticle, getTalks } from '@/lib/dal';
 import Sponsor from '@/components/sponsor';
 
 const ARTICLES = getArticle().slice(0, 3);
+const TAILS = getTalks().slice(0, 2);
 
 const SPONSORS: { src: string; name: string }[] = [
   {
@@ -109,16 +110,11 @@ export default function Home() {
             Twitter
           </Anchor>
         </List>
-        <List>
-          <Anchor href="https://drive.google.com/file/d/1hzv8uhHzSomesRgs6HpPGWKnaHNkdIT0/view">
-            DEPROCON 25 - 오픈 소스 기여부터 관리까지
-          </Anchor>
-        </List>
-        <List>
-          <Anchor href="/posts/feconf-2024">
-            FEConf 2024 Lightning Talk - 오픈 소스 기여, 어렵지 않아요!
-          </Anchor>
-        </List>
+        {TAILS.map((post) => (
+          <List key={post.title}>
+            <Anchor href={post.link}>{post.title}</Anchor>
+          </List>
+        ))}
       </Section>
       <Section title="후원해 주셔서 감사합니다">
         <List>

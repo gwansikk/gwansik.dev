@@ -5,7 +5,7 @@ export const HOST_NAME = 'www.gwansik.dev';
 export const PATH = {
   ROOT: '/',
   POSTS: '/posts',
-  PROJECTS: '/projects',
   NOTES: '/notes',
+  TALKS: '/talks',
   GITHUB: 'https://github.com/gwansikk',
 } as const;

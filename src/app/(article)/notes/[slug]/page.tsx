@@ -8,7 +8,7 @@ import { BASE_URL, PATH } from '@/constants/path';
 import List from '@/components/list';
 import CopyButton from '@/components/(article)/copy-button';
 import MailButton from '@/components/(article)/mail-button';
-import { getNotes } from '@/data/velite-data-accessor';
+import { getNotes } from '@/lib/dal';
 
 const NOTES = getNotes();
 

@@ -4,7 +4,7 @@ import Title from '@/components/title';
 import ArticleMetadata from '@/components/(article)/article-metadata';
 import PageLink from '@/components/page-link';
 import type { Metadata } from 'next';
-import { getPosts } from '@/data/velite-data-accessor';
+import { getPosts } from '@/lib/dal';
 
 const POSTS = getPosts();
 
@@ -28,7 +28,7 @@ export default function Posts() {
   );
 }
 
-const Post = ({ post }: { post: TPost }) => {
+function Post({ post }: { post: TPost }) {
   return (
     <li key={post.slug}>
       <Link
@@ -42,4 +42,4 @@ const Post = ({ post }: { post: TPost }) => {
       </Link>
     </li>
   );
-};
+}

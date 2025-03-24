@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import type { Note as TNote } from '#content';
 import Link from 'next/link';
 import ArticleMetadata from '@/components/(article)/article-metadata';
-import { getNotes } from '@/data/velite-data-accessor';
+import { getNotes } from '@/lib/dal';
 
 const NOTES = getNotes();
 
@@ -28,7 +28,7 @@ export default function Notes() {
   );
 }
 
-const Note = ({ note }: { note: TNote }) => {
+function Note({ note }: { note: TNote }) {
   return (
     <li key={note.slug}>
       <Link
@@ -43,4 +43,4 @@ const Note = ({ note }: { note: TNote }) => {
       </Link>
     </li>
   );
-};
+}
