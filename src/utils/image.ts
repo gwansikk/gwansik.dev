@@ -17,8 +17,8 @@ export async function getImageMetadata(imagePath: string) {
 
   return {
     src: imagePath,
-    width,
-    height,
+    width: metadata.width ?? 0,
+    height: metadata.height ?? 0,
     blurDataURL,
   };
 }
