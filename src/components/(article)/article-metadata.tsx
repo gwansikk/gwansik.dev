@@ -3,7 +3,7 @@ interface Props {
   readingTime: number;
 }
 
-const ArticleMetadata = ({ date, readingTime }: Props) => {
+export default function ArticleMetadata({ date, readingTime }: Props) {
   return (
     <div className="space-x-2 text-sm text-zinc-500">
       <span>
@@ -17,6 +17,4 @@ const ArticleMetadata = ({ date, readingTime }: Props) => {
       <time>{readingTime}min</time>
     </div>
   );
-};
-
-export default ArticleMetadata;
+}

@@ -6,7 +6,7 @@ import { toast } from 'sonner';
 
 const SUCCESS_MESSAGE = '의견을 보내주셔서 감사합니다.';
 
-const MailButton = () => {
+export default function MailButton() {
   const handleMailClick = () => {
     toast.info(SUCCESS_MESSAGE);
   };
@@ -17,6 +17,4 @@ const MailButton = () => {
       </a>
     </Button>
   );
-};
-
-export default MailButton;
+}

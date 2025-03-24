@@ -6,7 +6,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Anchor = ({ icon, href, children }: Props) => {
+export default function Anchor({ icon, href, children }: Props) {
   return (
     <Link
       href={href}
@@ -18,6 +18,4 @@ const Anchor = ({ icon, href, children }: Props) => {
       {children}
     </Link>
   );
-};
-
-export default Anchor;
+}

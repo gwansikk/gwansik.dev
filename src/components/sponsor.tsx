@@ -6,7 +6,7 @@ interface Props {
   name: string;
 }
 
-const Sponsor = ({ src, name }: Props) => {
+export default function Sponsor({ src, name }: Props) {
   return (
     <Link
       className="flex flex-col items-center gap-1 text-sm"
@@ -26,6 +26,4 @@ const Sponsor = ({ src, name }: Props) => {
       <span>{name}</span>
     </Link>
   );
-};
-
-export default Sponsor;
+}

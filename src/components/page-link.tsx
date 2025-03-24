@@ -8,7 +8,7 @@ interface Props {
   children?: React.ReactNode;
 }
 
-const PageLink = ({ href, className, children }: Props) => {
+export default function PageLink({ href, className, children }: Props) {
   return (
     <p className={cn('truncate', className)}>
       <Link
@@ -19,6 +19,4 @@ const PageLink = ({ href, className, children }: Props) => {
       </Link>
     </p>
   );
-};
-
-export default PageLink;
+}
