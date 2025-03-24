@@ -51,7 +51,7 @@ export default async function Note({ params }: Params) {
 
   return (
     <>
-      <header>
+      <header className="space-y-2">
         <Title>{note.title}</Title>
         <ArticleMetadata date={note.date} readingTime={note.readingTime} />
       </header>

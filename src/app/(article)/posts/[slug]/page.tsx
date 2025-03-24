@@ -51,7 +51,7 @@ export default async function Post({ params }: Params) {
 
   return (
     <>
-      <header>
+      <header className="space-y-2">
         <Title>{post.title}</Title>
         <ArticleMetadata date={post.date} readingTime={post.readingTime} />
       </header>
