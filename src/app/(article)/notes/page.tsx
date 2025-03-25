@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import type { Note as TNote } from '#content';
 import Link from 'next/link';
 import ArticleMetadata from '@/components/(article)/article-metadata';
-import { getNotes } from '@/lib/dal';
+import { getNotes } from '@/utils/data-access-layer';
 
 const NOTES = getNotes();
 

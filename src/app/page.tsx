@@ -9,22 +9,12 @@ import {
   SiLinkedin,
   SiX,
 } from 'react-icons/si';
-import { getArticle, getTalks } from '@/lib/dal';
+import { getArticle, getSponsors, getTalks } from '@/utils/data-access-layer';
 import Sponsor from '@/components/sponsor';
 
 const ARTICLES = getArticle().slice(0, 3);
-const TAILS = getTalks().slice(0, 2);
-
-const SPONSORS: { src: string; name: string }[] = [
-  {
-    src: 'https://avatars.githubusercontent.com/u/147500032?s=70&v=4',
-    name: 'love1ace',
-  },
-  {
-    src: 'https://avatars.githubusercontent.com/u/85067003?s=70&v=4',
-    name: 'limehee',
-  },
-] as const;
+const TALKS = getTalks().slice(0, 2);
+const SPONSORS = getSponsors();
 
 export default function Home() {
   return (
@@ -36,7 +26,7 @@ export default function Home() {
         </h2>
       </header>
       <section className="space-y-6">
-        <p>안녕하세요, 개발자 김관식입니다.</p>
+        <p>개발자 김관식입니다.</p>
         <p>
           주변에서 겪는 문제를 기술로 해결하고자 창업과 개발을 시작했습니다.
           문제를 해결하는 프로파일러처럼 주도적으로 분석하고 적절한 해답을
@@ -73,9 +63,7 @@ export default function Home() {
         <List>
           <Anchor href="https://github.com/offlegacy">OffLegacy</Anchor>
           <Anchor href="https://suspensive.org">Suspensive</Anchor>
-          <Anchor href="https://query-adaptor.gwansik.dev">
-            Query Adaptor
-          </Anchor>
+          <Anchor href="https://query-adaptor.gwansik.dev">Query Layer</Anchor>
         </List>
         <List>
           <Anchor
@@ -110,9 +98,9 @@ export default function Home() {
             Twitter
           </Anchor>
         </List>
-        {TAILS.map((post) => (
-          <List key={post.title}>
-            <Anchor href={post.link}>{post.title}</Anchor>
+        {TALKS.map((talk) => (
+          <List key={talk.title}>
+            <Anchor href={talk.link}>{talk.title}</Anchor>
           </List>
         ))}
       </Section>

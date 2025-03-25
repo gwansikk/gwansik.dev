@@ -1,6 +1,6 @@
 import Title from '@/components/title';
 import type { Metadata } from 'next';
-import { getTalks, type Talk } from '@/lib/dal';
+import { getTalks, type Talk } from '@/utils/data-access-layer';
 import Link from 'next/link';
 import { formatDate } from '@/utils/date';
 

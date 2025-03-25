@@ -1,5 +1,5 @@
 import { BASE_URL, PATH } from '@/constants/path';
-import { getNotes, getPosts } from '@/lib/dal';
+import { getNotes, getPosts } from '@/utils/data-access-layer';
 import type { MetadataRoute } from 'next';
 
 const latestPost = getPosts()[0];
