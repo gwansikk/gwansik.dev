@@ -1,8 +1,8 @@
 import Title from '@/components/title';
 import type { Metadata } from 'next';
-import PageLink from '@/components/page-link';
-import { getTalks } from '@/lib/dal';
+import { getTalks, type Talk } from '@/lib/dal';
 import Link from 'next/link';
+import { formatDate } from '@/utils/date';
 
 const TALKS = getTalks();
 
@@ -18,22 +18,28 @@ export default function Talks() {
       </header>
       <ul className="space-y-6">
         {TALKS.map((talk) => (
-          <Post key={talk.title} {...talk} />
+          <Talk key={talk.title} {...talk} />
         ))}
       </ul>
-      <PageLink />
     </>
   );
 }
 
-function Post({ title, link }: { title: string; link: string }) {
+function Talk(talk: Talk) {
   return (
-    <li key={title}>
+    <li key={talk.title}>
       <Link
-        href={link}
+        href={talk.link}
         className="flex flex-col transition-colors hover:text-black sm:flex-row sm:items-center sm:gap-2 dark:hover:text-white"
       >
-        <p className="font-semibold">{title}</p>
+        <p className="font-semibold">{talk.title}</p>
+        <div className="flex gap-2 sm:justify-center">
+          <div className="space-x-2 text-sm text-zinc-500">
+            <span>{talk.conference}</span>
+            <span>·</span>
+            <span>{formatDate(talk.date)}</span>
+          </div>
+        </div>
       </Link>
     </li>
   );

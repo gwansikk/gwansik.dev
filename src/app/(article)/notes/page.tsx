@@ -1,5 +1,4 @@
 import Title from '@/components/title';
-import PageLink from '@/components/page-link';
 import type { Metadata } from 'next';
 import type { Note as TNote } from '#content';
 import Link from 'next/link';
@@ -23,7 +22,6 @@ export default function Notes() {
           <Note key={note.slug} note={note} />
         ))}
       </ul>
-      <PageLink />
     </>
   );
 }
