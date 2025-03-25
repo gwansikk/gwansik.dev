@@ -1,7 +1,7 @@
-import Section from '@/components/section';
-import List from '@/components/list';
-import Title from '@/components/title';
-import Anchor from '@/components/anchor';
+import Section from '~/components/section';
+import List from '~/components/list';
+import Title from '~/components/title';
+import Anchor from '~/components/anchor';
 import {
   SiReactquery,
   SiPnpm,
@@ -9,8 +9,8 @@ import {
   SiLinkedin,
   SiX,
 } from 'react-icons/si';
-import { getArticle, getSponsors, getTalks } from '@/utils/data-access-layer';
-import Sponsor from '@/components/sponsor';
+import { getArticle, getSponsors, getTalks } from '~/utils/data-access-layer';
+import Sponsor from '~/components/sponsor';
 
 const ARTICLES = getArticle().slice(0, 3);
 const TALKS = getTalks().slice(0, 2);

@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import Nav from '@/components/nav';
-import Footer from '@/components/footer';
+import Nav from '~/components/nav';
+import Footer from '~/components/footer';
 import { Provider } from '../components/provider';
-import { BASE_URL } from '@/constants/path';
+import { BASE_URL } from '~/constants/path';
 import '../styles/globals.css';
 import { Toaster } from 'sonner';
 

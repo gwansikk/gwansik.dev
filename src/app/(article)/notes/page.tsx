@@ -1,9 +1,9 @@
-import Title from '@/components/title';
+import Title from '~/components/title';
 import type { Metadata } from 'next';
 import type { Note as TNote } from '#content';
 import Link from 'next/link';
-import ArticleMetadata from '@/components/(article)/article-metadata';
-import { getNotes } from '@/utils/data-access-layer';
+import ArticleMetadata from '~/components/(article)/article-metadata';
+import { getNotes } from '~/utils/data-access-layer';
 
 const NOTES = getNotes();
 

@@ -1,8 +1,8 @@
-import Title from '@/components/title';
+import Title from '~/components/title';
 import type { Metadata } from 'next';
-import { getTalks, type Talk } from '@/utils/data-access-layer';
+import { getTalks, type Talk } from '~/utils/data-access-layer';
 import Link from 'next/link';
-import { formatDate } from '@/utils/date';
+import { formatDate } from '~/utils/date';
 
 const TALKS = getTalks();
 

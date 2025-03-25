@@ -1,4 +1,4 @@
-import { getImageMetadata } from '@/utils/image';
+import { getImageMetadata } from '~/utils/image';
 import type { MDXComponents } from 'mdx/types';
 import Image from 'next/image';
 

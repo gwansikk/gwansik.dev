@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { LuGithub } from 'react-icons/lu';
-import { PATH } from '@/constants/path';
+import { PATH } from '~/constants/path';
 import Image from 'next/image';
 
 export default function Nav() {

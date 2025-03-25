@@ -1,14 +1,14 @@
-import { MDXContent } from '@/components/(article)/mdx-content';
+import { MDXContent } from '~/components/(article)/mdx-content';
 import { notFound } from 'next/navigation';
-import Title from '@/components/title';
-import ArticleMetadata from '@/components/(article)/article-metadata';
-import { mdxComponents } from '@/components/(article)/mdx-components';
-import PageLink from '@/components/page-link';
-import { BASE_URL, PATH } from '@/constants/path';
-import List from '@/components/list';
-import CopyButton from '@/components/(article)/copy-button';
-import MailButton from '@/components/(article)/mail-button';
-import { getNotes } from '@/utils/data-access-layer';
+import Title from '~/components/title';
+import ArticleMetadata from '~/components/(article)/article-metadata';
+import { mdxComponents } from '~/components/(article)/mdx-components';
+import PageLink from '~/components/page-link';
+import { BASE_URL, PATH } from '~/constants/path';
+import List from '~/components/list';
+import CopyButton from '~/components/(article)/copy-button';
+import MailButton from '~/components/(article)/mail-button';
+import { getNotes } from '~/utils/data-access-layer';
 
 const NOTES = getNotes();
 

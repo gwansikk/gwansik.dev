@@ -1,9 +1,9 @@
 import type { Post as TPost } from '#content';
 import Link from 'next/link';
-import Title from '@/components/title';
-import ArticleMetadata from '@/components/(article)/article-metadata';
+import Title from '~/components/title';
+import ArticleMetadata from '~/components/(article)/article-metadata';
 import type { Metadata } from 'next';
-import { getPosts } from '@/utils/data-access-layer';
+import { getPosts } from '~/utils/data-access-layer';
 
 const POSTS = getPosts();
 
