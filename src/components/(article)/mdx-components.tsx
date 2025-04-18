@@ -5,19 +5,25 @@ import Image from 'next/image';
 export const mdxComponents: MDXComponents = {
   h1: ({ children, ...props }) => (
     <h2
-      className="!mt-10 text-2xl font-bold text-black dark:text-white"
+      className="!mt-10 text-2xl font-bold text-black dark:text-zinc-200"
       {...props}
     >
       {children}
     </h2>
   ),
   h2: ({ children, ...props }) => (
-    <h3 className="text-xl font-semibold text-black dark:text-white" {...props}>
+    <h3
+      className="text-xl font-semibold text-black dark:text-zinc-200"
+      {...props}
+    >
       {children}
     </h3>
   ),
   h3: ({ children, ...props }) => (
-    <h4 className="text-lg font-semibold text-black dark:text-white" {...props}>
+    <h4
+      className="text-lg font-semibold text-black dark:text-zinc-200"
+      {...props}
+    >
       {children}
     </h4>
   ),
