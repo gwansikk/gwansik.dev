@@ -1,6 +1,6 @@
 import Title from '~/components/title';
 import type { Metadata } from 'next';
-import { getTalks, type Talk } from '~/utils/data-access-layer';
+import { getTalks, type Talk as TTalk } from '~/utils/data-access-layer';
 import Link from 'next/link';
 import { formatDate } from '~/utils/date';
 
@@ -18,14 +18,14 @@ export default function Talks() {
       </header>
       <ul className="space-y-6">
         {TALKS.map((talk) => (
-          <Talk key={talk.title} {...talk} />
+          <Talk key={talk.title} talk={talk} />
         ))}
       </ul>
     </>
   );
 }
 
-function Talk(talk: Talk) {
+function Talk({ talk }: { talk: TTalk }) {
   return (
     <li key={talk.title}>
       <Link

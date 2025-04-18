@@ -35,7 +35,6 @@ function Note({ note }: { note: TNote }) {
       >
         <p className="font-semibold">{note.title}</p>
         <div className="flex items-center gap-2 sm:justify-center">
-          <span className="hidden text-zinc-500 sm:flex">·</span>
           <ArticleMetadata date={note.date} readingTime={note.readingTime} />
         </div>
       </Link>
