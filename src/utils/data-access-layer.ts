@@ -8,8 +8,7 @@ export type Talk = {
 };
 
 export type Sponsor = {
-  src: string;
-  name: string;
+  github: string;
 };
 
 export function getPosts(): Post[] {
@@ -50,12 +49,10 @@ export function getTalks(): Talk[] {
 export function getSponsors(): Sponsor[] {
   return [
     {
-      src: 'https://avatars.githubusercontent.com/u/147500032?s=70&v=4',
-      name: 'love1ace',
+      github: 'love1ace',
     },
     {
-      src: 'https://avatars.githubusercontent.com/u/85067003?s=70&v=4',
-      name: 'limehee',
+      github: 'limehee',
     },
   ];
 }

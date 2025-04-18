@@ -2,28 +2,27 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface Props {
-  src: string;
-  name: string;
+  github: string;
 }
 
-export default function Sponsor({ src, name }: Props) {
+export default function Sponsor({ github }: Props) {
   return (
     <Link
       className="flex flex-col items-center gap-1 text-sm"
-      href={`https://github.com/${name}`}
+      href={`https://github.com/${github}`}
       target="_blank"
       rel="noopener noreferrer"
     >
       <Image
-        width={40}
-        height={40}
-        className="size-10 rounded-full"
-        src={src}
-        alt={`${name}'s avatar`}
-        title={`sponsor by ${name}`}
+        className="size-11 rounded-full"
+        width={44}
+        height={44}
+        src={`https://github.com/${github}.png`}
+        alt={`${github}'s avatar`}
+        title={`sponsor by ${github}`}
         priority
       />
-      <span>{name}</span>
+      <span>{github}</span>
     </Link>
   );
 }
