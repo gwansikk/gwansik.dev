@@ -31,12 +31,10 @@ function Post({ post }: { post: TPost }) {
     <li key={post.slug}>
       <Link
         href={post.permalink}
-        className="flex flex-col transition-colors hover:text-black sm:flex-row sm:items-center sm:gap-2 dark:hover:text-white"
+        className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center"
       >
         <p className="font-semibold">{post.title}</p>
-        <div className="flex gap-2 sm:justify-center">
-          <ArticleMetadata date={post.date} readingTime={post.readingTime} />
-        </div>
+        <ArticleMetadata date={post.date} readingTime={post.readingTime} />
       </Link>
     </li>
   );

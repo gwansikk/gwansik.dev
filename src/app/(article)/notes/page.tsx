@@ -31,12 +31,10 @@ function Note({ note }: { note: TNote }) {
     <li key={note.slug}>
       <Link
         href={note.permalink}
-        className="flex flex-col transition-colors hover:text-black sm:flex-row sm:items-center sm:gap-2 dark:hover:text-white"
+        className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center"
       >
         <p className="font-semibold">{note.title}</p>
-        <div className="flex items-center gap-2 sm:justify-center">
-          <ArticleMetadata date={note.date} readingTime={note.readingTime} />
-        </div>
+        <ArticleMetadata date={note.date} readingTime={note.readingTime} />
       </Link>
     </li>
   );

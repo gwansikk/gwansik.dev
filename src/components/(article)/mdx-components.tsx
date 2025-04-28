@@ -5,7 +5,7 @@ import Image from 'next/image';
 export const mdxComponents: MDXComponents = {
   h1: ({ children, ...props }) => (
     <h2
-      className="!mt-10 text-2xl font-bold text-black dark:text-zinc-200"
+      className="!mt-10 text-2xl font-bold text-black dark:text-zinc-100"
       {...props}
     >
       {children}
@@ -13,7 +13,7 @@ export const mdxComponents: MDXComponents = {
   ),
   h2: ({ children, ...props }) => (
     <h3
-      className="text-xl font-semibold text-black dark:text-zinc-200"
+      className="text-xl font-semibold text-black dark:text-zinc-100"
       {...props}
     >
       {children}
@@ -21,7 +21,7 @@ export const mdxComponents: MDXComponents = {
   ),
   h3: ({ children, ...props }) => (
     <h4
-      className="text-lg font-semibold text-black dark:text-zinc-200"
+      className="text-lg font-semibold text-black dark:text-zinc-100"
       {...props}
     >
       {children}
@@ -66,6 +66,6 @@ export const mdxComponents: MDXComponents = {
     );
   },
   hr: (props) => (
-    <hr className="m-auto h-20 w-1 border-none bg-zinc-500" {...props} />
+    <hr className="m-auto h-10 w-1 border-none bg-zinc-600" {...props} />
   ),
 };

@@ -30,15 +30,13 @@ function Talk({ talk }: { talk: TTalk }) {
     <li key={talk.title}>
       <Link
         href={talk.link}
-        className="flex flex-col transition-colors hover:text-black sm:flex-row sm:items-center sm:gap-2 dark:hover:text-white"
+        className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center"
       >
         <p className="font-semibold">{talk.title}</p>
-        <div className="flex gap-2 sm:justify-center">
-          <div className="space-x-2 text-sm text-zinc-500">
-            <span>{talk.conference}</span>
-            <span>·</span>
-            <span>{formatDate(talk.date)}</span>
-          </div>
+        <div className="space-x-2 text-sm text-zinc-500">
+          <span>{talk.conference}</span>
+          <span>·</span>
+          <span>{formatDate(talk.date)}</span>
         </div>
       </Link>
     </li>

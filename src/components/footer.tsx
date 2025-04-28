@@ -9,11 +9,11 @@ const WORKING_LOCATION = {
     NAME: 'Seoul, South Korea 🇰🇷',
     REF: 'https://en.wikipedia.org/wiki/Seoul',
   },
-};
+} as const;
 
 export default function Footer() {
   return (
-    <footer className="container py-2 text-sm text-zinc-400">
+    <footer className="container py-4 text-sm text-zinc-500">
       <p>
         <Link
           className="underline-offset-2 hover:underline"
@@ -26,12 +26,12 @@ export default function Footer() {
         &copy; Gwansik Kim
       </p>
       <Link
-        href={WORKING_LOCATION.TAMPA.REF}
+        href={WORKING_LOCATION.SEOUL.REF}
         className="underline-offset-2 hover:underline"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Working in {WORKING_LOCATION.TAMPA.NAME}
+        Working in {WORKING_LOCATION.SEOUL.NAME}
       </Link>
     </footer>
   );

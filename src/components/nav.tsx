@@ -5,10 +5,10 @@ import Image from 'next/image';
 
 export default function Nav() {
   return (
-    <nav className="container flex h-[40px] items-center justify-between">
+    <nav className="container flex h-[48px] items-center justify-between">
       <Link
         href={PATH.ROOT}
-        className="flex items-center gap-1.5 text-zinc-800 dark:text-zinc-200"
+        className="flex items-center gap-1.5 text-zinc-900 dark:text-zinc-100"
       >
         {/* <Image
               className="rounded-full"
@@ -32,25 +32,15 @@ export default function Nav() {
         <NavButton href={PATH.POSTS}>Posts</NavButton>
         <NavButton href={PATH.NOTES}>Notes</NavButton>
         <NavButton href={PATH.TALKS}>Talks</NavButton>
-        <Link
-          href={PATH.GITHUB}
-          className="text-zinc-500 transition-colors hover:text-black dark:hover:text-white"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <NavButton href={PATH.GITHUB} target="_blank" rel="noopener noreferrer">
           <LuGithub />
-        </Link>
+        </NavButton>
       </div>
     </nav>
   );
 }
 
-interface NavButtonProps {
-  href: string;
-  children: React.ReactNode;
-}
-
-function NavButton({ href, children }: NavButtonProps) {
+function NavButton({ href, children }: React.ComponentProps<typeof Link>) {
   return (
     <Link
       href={href}
