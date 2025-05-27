@@ -32,6 +32,12 @@ export function getArticle() {
 export function getTalks(): Talk[] {
   return [
     {
+      conference: 'SOPT Webinar',
+      title: 'TanStack Query, 상태 관리자로 바라보기',
+      date: '2025-05-27',
+      link: 'https://drive.google.com/file/d/12gt1pcvb_gXsVLo1JfcPe9NXnsowk7NM/view',
+    },
+    {
       conference: 'DEPROCON 25',
       title: '오픈 소스 기여부터 관리까지',
       date: '2025-01-11',
@@ -41,7 +47,7 @@ export function getTalks(): Talk[] {
       conference: 'FEConf 2024 Lightning Talk',
       title: '오픈 소스 기여, 어렵지 않아요!',
       date: '2024-08-24',
-      link: '/posts/feconf-2024',
+      link: 'https://drive.google.com/file/d/1qcXOaFodRQBR9pa_nBcdIeKVdEZACQNx/view',
     },
   ];
 }
