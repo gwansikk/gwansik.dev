@@ -27,7 +27,7 @@ export default function Home() {
         </h2>
       </header>
       <section className="space-y-6">
-        <p>개발자 김관식입니다.</p>
+        <p>안녕하세요, 개발자 김관식입니다.</p>
         <p>
           주변에서 겪는 문제를 기술로 해결하고자 창업과 개발을 시작했습니다.
           사건을 해결하는 프로파일러처럼 분석하고 적절한 해답을 찾아가는 과정을
@@ -35,7 +35,7 @@ export default function Home() {
           연결시키는 데에 집중합니다.
         </p>
         <p>
-          아이디어와 솔루션을 개발 생태계에서 영감을 얻어 오픈 소스에 관심이
+          아이디어와 인사이트를 개발 생태계에서 영감을 얻어 오픈 소스에 관심이
           많습니다. 현재{' '}
           <Anchor href="https://suspensive.org">Suspensive</Anchor>의 관리자로
           라이브러리를 개발하고 있으며, 오픈 소스팀{' '}

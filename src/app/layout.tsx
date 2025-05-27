@@ -41,16 +41,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <Provider>
-        <body className={`px-6 antialiased ${pretendard.variable}`}>
+      <body className={`px-6 antialiased ${pretendard.variable}`}>
+        <Provider>
           <Nav />
           <main className="container break-keep leading-relaxed text-zinc-900 dark:text-zinc-100">
             <article className="space-y-8 py-14">{children}</article>
           </main>
           <Footer />
           <Toaster position="bottom-right" expand />
-        </body>
-      </Provider>
+        </Provider>
+      </body>
     </html>
   );
 }

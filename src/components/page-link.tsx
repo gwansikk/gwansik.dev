@@ -10,7 +10,7 @@ interface Props {
 
 export default function PageLink({ href, className, children }: Props) {
   return (
-    <p className={cn('truncate', className)}>
+    <p className={cn('break-words', className)}>
       <Link
         href={href ?? PATH.ROOT}
         className="border-b-[1px] transition-colors hover:border-b-black dark:border-b-zinc-700 dark:hover:border-b-white"

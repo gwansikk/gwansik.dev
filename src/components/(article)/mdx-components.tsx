@@ -35,7 +35,7 @@ export const mdxComponents: MDXComponents = {
   ),
   blockquote: (props) => (
     <blockquote
-      className="rounded-xl bg-zinc-100 p-4 dark:bg-zinc-900"
+      className="rounded-2xl bg-zinc-100 p-4 dark:bg-zinc-900"
       {...props}
     />
   ),
