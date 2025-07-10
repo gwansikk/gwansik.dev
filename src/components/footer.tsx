@@ -11,7 +11,7 @@ const WORKING_LOCATION = {
   },
 } as const;
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="container py-4 text-sm text-zinc-500">
       <p>

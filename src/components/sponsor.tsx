@@ -5,7 +5,7 @@ interface Props {
   github: string;
 }
 
-export default function Sponsor({ github }: Props) {
+export function Sponsor({ github }: Props) {
   return (
     <Link
       className="flex flex-col items-center gap-1 text-sm"

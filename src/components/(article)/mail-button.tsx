@@ -1,12 +1,12 @@
 'use client';
 
-import Button from '~/components/button';
+import { Button } from '~/components/button';
 import { HiOutlineMail } from 'react-icons/hi';
 import { toast } from 'sonner';
 
 const SUCCESS_MESSAGE = '의견을 보내주셔서 감사합니다.';
 
-export default function MailButton() {
+export function MailButton() {
   const handleMailClick = () => {
     toast.info(SUCCESS_MESSAGE);
   };

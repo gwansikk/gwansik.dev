@@ -6,7 +6,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export default function Anchor({ icon, href, children }: Props) {
+export function Anchor({ icon, href, children }: Props) {
   return (
     <Link
       href={href}

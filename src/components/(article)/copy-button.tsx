@@ -1,12 +1,12 @@
 'use client';
 
-import Button from '~/components/button';
+import { Button } from '~/components/button';
 import { HiOutlineLink } from 'react-icons/hi';
 import { toast } from 'sonner';
 
 const SUCCESS_MESSAGE = '링크가 복사됐어요.';
 
-export default function CopyButton() {
+export function CopyButton() {
   const handleCopyClick = () => {
     const url = new URL(window.location.href);
     url.searchParams.set('utm_source', 'share');

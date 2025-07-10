@@ -1,4 +1,4 @@
-import { type Note, type Post, posts, notes } from '#content';
+import { type Post, posts } from '#content';
 
 export type Talk = {
   conference: string;
@@ -13,18 +13,6 @@ export type Sponsor = {
 
 export function getPosts(): Post[] {
   return posts.sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
-  });
-}
-
-export function getNotes(): Note[] {
-  return notes.sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
-  });
-}
-
-export function getArticle() {
-  return [...posts, ...notes].sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
 }
@@ -44,7 +32,7 @@ export function getTalks(): Talk[] {
       link: 'https://drive.google.com/file/d/1hzv8uhHzSomesRgs6HpPGWKnaHNkdIT0/view',
     },
     {
-      conference: 'FEConf 2024 Lightning Talk',
+      conference: 'FEConf 2024 Lightning talks',
       title: '오픈 소스 기여, 어렵지 않아요!',
       date: '2024-08-24',
       link: 'https://drive.google.com/file/d/1qcXOaFodRQBR9pa_nBcdIeKVdEZACQNx/view',

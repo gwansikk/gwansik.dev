@@ -3,7 +3,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-export default function Section({ title, children }: Props) {
+export function Section({ title, children }: Props) {
   return (
     <section className="space-y-2">
       <h3 className="text-zinc-500">{title}</h3>

@@ -1,23 +1,15 @@
 import Link from 'next/link';
 import { LuGithub } from 'react-icons/lu';
-import { PATH } from '~/constants/path';
+import { PATH } from '~/constants';
 import Image from 'next/image';
 
-export default function Nav() {
+export function Nav() {
   return (
     <nav className="container flex h-[48px] items-center justify-between">
       <Link
         href={PATH.ROOT}
         className="flex items-center gap-1.5 text-zinc-900 dark:text-zinc-100"
       >
-        {/* <Image
-              className="rounded-full"
-              src="https://avatars.githubusercontent.com/u/39869096?s=70&v=4"
-              alt="gwansikk's avatar"
-              width={36}
-              height={36}
-              priority
-            /> */}
         <Image
           className="dark:invert"
           src="/sign.webp"
@@ -29,8 +21,7 @@ export default function Nav() {
         />
       </Link>
       <div className="flex items-center gap-4">
-        <NavButton href={PATH.POSTS}>Posts</NavButton>
-        <NavButton href={PATH.NOTES}>Notes</NavButton>
+        <NavButton href={PATH.POSTS}>Blog</NavButton>
         <NavButton href={PATH.TALKS}>Talks</NavButton>
         <NavButton href={PATH.GITHUB} target="_blank" rel="noopener noreferrer">
           <LuGithub />

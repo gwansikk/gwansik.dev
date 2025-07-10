@@ -1,13 +1,13 @@
 import { MDXContent } from '~/components/(article)/mdx-content';
 import { notFound } from 'next/navigation';
-import Title from '~/components/title';
-import ArticleMetadata from '~/components/(article)/article-metadata';
+import { Title } from '~/components/title';
+import { ArticleMetadata } from '~/components/(article)/article-metadata';
 import { mdxComponents } from '~/components/(article)/mdx-components';
-import PageLink from '~/components/page-link';
-import { PATH, BASE_URL } from '~/constants/path';
-import List from '~/components/list';
-import CopyButton from '~/components/(article)/copy-button';
-import MailButton from '~/components/(article)/mail-button';
+import { PageLink } from '~/components/page-link';
+import { PATH, BASE_URL } from '~/constants';
+import { List } from '~/components/list';
+import { CopyButton } from '~/components/(article)/copy-button';
+import { MailButton } from '~/components/(article)/mail-button';
 import { getPosts } from '~/utils/data-access-layer';
 
 const POSTS = getPosts();
@@ -19,10 +19,7 @@ interface Params {
 export async function generateMetadata({ params }: Params) {
   const { slug } = await params;
   const post = POSTS.find((i) => i.slug === slug);
-
-  if (!post) {
-    return;
-  }
+  if (!post) return;
 
   return {
     title: post.title,
@@ -60,10 +57,10 @@ export default async function Post({ params }: Params) {
         <CopyButton />
         <MailButton />
       </List>
-      <List className="justify-between">
+      <List className="flex-wrap justify-between">
         <PageLink href={PATH.POSTS} />
         {nextPost && (
-          <PageLink href={nextPost.permalink} className="w-2/3 text-right">
+          <PageLink href={nextPost.permalink} className="text-right">
             {nextPost.title}
           </PageLink>
         )}

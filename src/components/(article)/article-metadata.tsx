@@ -5,7 +5,7 @@ interface Props {
   readingTime: number;
 }
 
-export default function ArticleMetadata({ date, readingTime }: Props) {
+export function ArticleMetadata({ date, readingTime }: Props) {
   return (
     <div className="space-x-2 text-sm text-zinc-500">
       <span>{formatDate(date)}</span>

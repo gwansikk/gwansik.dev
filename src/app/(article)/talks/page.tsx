@@ -1,4 +1,4 @@
-import Title from '~/components/title';
+import { Title } from '~/components/title';
 import type { Metadata } from 'next';
 import { getTalks, type Talk as TTalk } from '~/utils/data-access-layer';
 import Link from 'next/link';
@@ -31,6 +31,8 @@ function Talk({ talk }: { talk: TTalk }) {
       <Link
         href={talk.link}
         className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         <p className="font-semibold">{talk.title}</p>
         <div className="space-x-2 text-sm text-zinc-500">

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { PATH } from '~/constants/path';
+import { PATH } from '~/constants';
 import { cn } from '~/utils/cn';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
   children?: React.ReactNode;
 }
 
-export default function PageLink({ href, className, children }: Props) {
+export function PageLink({ href, className, children }: Props) {
   return (
     <p className={cn('break-words', className)}>
       <Link

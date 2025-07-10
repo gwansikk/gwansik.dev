@@ -1,9 +1,9 @@
-import { BASE_URL, PATH } from '~/constants/path';
-import { getNotes, getPosts } from '~/utils/data-access-layer';
+import { BASE_URL, PATH } from '~/constants';
+import { getPosts, getTalks } from '~/utils/data-access-layer';
 import type { MetadataRoute } from 'next';
 
 const latestPost = getPosts()[0];
-const latestNote = getNotes()[0];
+const latestTalk = getTalks()[0];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -20,14 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: new URL(PATH.NOTES, BASE_URL).toString(),
-      lastModified: new Date(latestNote.date),
-      changeFrequency: 'monthly',
-      priority: 0.5,
-    },
-    {
       url: new URL(PATH.TALKS, BASE_URL).toString(),
-      // lastModified: new Date(latestNote.date), TODO
+      lastModified: new Date(latestTalk.date),
       changeFrequency: 'monthly',
       priority: 0.5,
     },

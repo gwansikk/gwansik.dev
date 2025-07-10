@@ -9,7 +9,7 @@ export async function getImageMetadata(imagePath: string) {
   let width = metadata.width ?? 0;
   let height = metadata.height ?? 0;
 
-  if (width < 640 && width > 0) {
+  if (width < 640 && width >= 0) {
     const aspectRatio = height / width;
     width = 640;
     height = Math.round(width * aspectRatio);
@@ -17,8 +17,8 @@ export async function getImageMetadata(imagePath: string) {
 
   return {
     src: imagePath,
-    width: metadata.width ?? 0,
-    height: metadata.height ?? 0,
+    width,
+    height,
     blurDataURL,
   };
 }

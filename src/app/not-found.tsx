@@ -1,5 +1,5 @@
-import Title from '~/components/title';
-import PageLink from '~/components/page-link';
+import { Title } from '~/components/title';
+import { PageLink } from '~/components/page-link';
 
 export default function NotFound() {
   return (
