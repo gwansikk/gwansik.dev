@@ -8,7 +8,8 @@
     "build": "velite && next build",
     "build:velite": "velite",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "knip": "knip"
   },
   "dependencies": {
     "@expressive-code/plugin-collapsible-sections": "^0.41.1",
@@ -36,6 +37,7 @@
     "@typescript-eslint/parser": "^8.30.1",
     "eslint": "^9.24.0",
     "eslint-config-next": "15.3.5",
+    "knip": "^5.61.3",
     "postcss": "^8.5.3",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.14",

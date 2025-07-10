@@ -7,7 +7,7 @@ export type Talk = {
   link: string;
 };
 
-export type Sponsor = {
+type Sponsor = {
   github: string;
 };
 

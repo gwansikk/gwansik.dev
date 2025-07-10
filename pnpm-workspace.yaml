@@ -1,2 +1,6 @@
 onlyBuiltDependencies:
   - '@vercel/speed-insights'
+  - oxc-resolver
+
+packages:
+  - .
