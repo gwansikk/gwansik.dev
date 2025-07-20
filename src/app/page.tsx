@@ -25,7 +25,7 @@ export default function Home() {
         </h2>
       </header>
       <section className="space-y-6">
-        <p>안녕하세요, 엔지니어 김관식입니다.</p>
+        <p>안녕하세요, 소프트웨어 엔지니어 김관식입니다.</p>
         <p>
           주변에서 겪는 문제를 기술로 해결하고자 창업과 개발을 시작했습니다.
           <br />
