@@ -21,7 +21,7 @@ export default function Home() {
       <header>
         <Title>Gwansik Kim</Title>
         <h2 className="font-medium text-zinc-500">
-          Software Engineer, Open Source Enthusiast
+          Software Engineer, OSS Engineer
         </h2>
       </header>
       <section className="space-y-6">
@@ -29,8 +29,9 @@ export default function Home() {
         <p>
           주변에서 겪는 문제를 기술로 해결하고자 창업과 개발을 시작했습니다.
           <br />
-          사건을 해결하는 프로파일러처럼, 분석하고 적절한 해답을 찾아가는 과정을
-          즐기며 데이터 기반 사고를 통해 프로덕트 성장을 이끄는 데에 집중합니다.
+          사건을 해결하는 프로파일러처럼 분석하고 적절한 해답을 찾아가는 과정을
+          즐기며, 데이터 기반 사고를 통해 프로덕트 성장을 이끄는 데에
+          집중합니다.
         </p>
         <p>
           미국 시장에서 제품의 기획부터 개발, 출시까지 주도한 경험이 있습니다.
