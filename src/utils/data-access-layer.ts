@@ -32,7 +32,7 @@ export function getTalks(): Talk[] {
       link: 'https://drive.google.com/file/d/1hzv8uhHzSomesRgs6HpPGWKnaHNkdIT0/view',
     },
     {
-      conference: 'FEConf 2024 Lightning talks',
+      conference: 'FEConf 2024 Lightning Talk',
       title: '오픈 소스 기여, 어렵지 않아요!',
       date: '2024-08-24',
       link: 'https://drive.google.com/file/d/1qcXOaFodRQBR9pa_nBcdIeKVdEZACQNx/view',

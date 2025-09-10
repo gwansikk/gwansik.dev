@@ -20,9 +20,7 @@ export default function Home() {
     <>
       <header>
         <Title>Gwansik Kim</Title>
-        <h2 className="font-medium text-zinc-500">
-          Software Engineer, OSS Engineer
-        </h2>
+        <h2 className="font-medium text-zinc-500">Software Engineer</h2>
       </header>
       <section className="space-y-6">
         <p>안녕하세요, 소프트웨어 엔지니어 김관식입니다.</p>
@@ -61,12 +59,6 @@ export default function Home() {
           </Anchor>
           <Anchor href="https://github.com/rolldown/tsdown/issues?q=involves%3Agwansikk">
             tsdown
-          </Anchor>
-          <Anchor
-            icon={<SiPnpm />}
-            href="https://github.com/pnpm/pnpm/issues?q=involves%3Agwansikk"
-          >
-            pnpm
           </Anchor>
         </List>
       </Section>
