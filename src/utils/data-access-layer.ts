@@ -43,7 +43,7 @@ export function getTalks(): Talk[] {
 export function getSponsors(): Sponsor[] {
   return [
     {
-      github: 'love1ace',
+      github: 'theconomicat',
     },
     {
       github: 'limehee',
