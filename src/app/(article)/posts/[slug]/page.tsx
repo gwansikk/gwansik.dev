@@ -50,7 +50,7 @@ export default async function Post({ params }: Params) {
     <>
       <header className="space-y-2">
         <Title>{post.title}</Title>
-        <ArticleTags date={post.date} readingTime={post.readingTime} />
+        <ArticleTags date={post.date} />
       </header>
       <MDXContent code={post.code} components={mdxComponents} />
       <List>
