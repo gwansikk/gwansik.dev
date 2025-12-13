@@ -1,7 +1,7 @@
 import type { Post as TPost } from '#content';
 import Link from 'next/link';
 import { Title } from '~/components/title';
-import { ArticleMetadata } from '~/components/(article)/article-metadata';
+import { ArticleTags } from '~/components/(article)/article-tags';
 import type { Metadata } from 'next';
 import { getPosts } from '~/utils/data-access-layer';
 
@@ -34,7 +34,7 @@ function Post({ post }: { post: TPost }) {
         className="flex flex-col justify-between gap-2 sm:flex-row sm:items-center"
       >
         <p className="font-semibold">{post.title}</p>
-        <ArticleMetadata date={post.date} readingTime={post.readingTime} />
+        <ArticleTags date={post.date} />
       </Link>
     </li>
   );

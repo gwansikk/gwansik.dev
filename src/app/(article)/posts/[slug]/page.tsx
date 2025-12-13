@@ -1,7 +1,7 @@
 import { MDXContent } from '~/components/(article)/mdx-content';
 import { notFound } from 'next/navigation';
 import { Title } from '~/components/title';
-import { ArticleMetadata } from '~/components/(article)/article-metadata';
+import { ArticleTags } from '~/components/(article)/article-tags';
 import { mdxComponents } from '~/components/(article)/mdx-components';
 import { PageLink } from '~/components/page-link';
 import { PATH, BASE_URL } from '~/constants';
@@ -50,7 +50,7 @@ export default async function Post({ params }: Params) {
     <>
       <header className="space-y-2">
         <Title>{post.title}</Title>
-        <ArticleMetadata date={post.date} readingTime={post.readingTime} />
+        <ArticleTags date={post.date} readingTime={post.readingTime} />
       </header>
       <MDXContent code={post.code} components={mdxComponents} />
       <List>
