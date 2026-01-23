@@ -5,6 +5,10 @@ const WORKING_LOCATION = {
     NAME: 'Florida, USA 🇺🇸',
     REF: 'https://en.wikipedia.org/wiki/Florida',
   },
+  NEW_YORK: {
+    NAME: 'New York, USA 🇺🇸',
+    REF: 'https://en.wikipedia.org/wiki/New_York',
+  },
   SEOUL: {
     NAME: 'Seoul, South Korea 🇰🇷',
     REF: 'https://en.wikipedia.org/wiki/Seoul',
@@ -26,12 +30,12 @@ export function Footer() {
         &copy; Gwansik Kim
       </p>
       <Link
-        href={WORKING_LOCATION.SEOUL.REF}
+        href={WORKING_LOCATION.NEW_YORK.REF}
         className="underline-offset-2 hover:underline"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Working in {WORKING_LOCATION.SEOUL.NAME}
+        Working in {WORKING_LOCATION.NEW_YORK.NAME}
       </Link>
     </footer>
   );
