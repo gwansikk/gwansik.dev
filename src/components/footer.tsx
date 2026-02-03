@@ -30,12 +30,12 @@ export function Footer() {
         &copy; Gwansik Kim
       </p>
       <Link
-        href={WORKING_LOCATION.NEW_YORK.REF}
+        href={WORKING_LOCATION.SEOUL.REF}
         className="underline-offset-2 hover:underline"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Working in {WORKING_LOCATION.NEW_YORK.NAME}
+        Working in {WORKING_LOCATION.SEOUL.NAME}
       </Link>
     </footer>
   );
