@@ -48,5 +48,8 @@ export function getSponsors(): Sponsor[] {
     {
       github: 'limehee',
     },
+    {
+      github: 'SongJaeHoonn',
+    },
   ];
 }
