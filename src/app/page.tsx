@@ -2,9 +2,10 @@ import { Section } from '~/components/section';
 import { List } from '~/components/list';
 import { Title } from '~/components/title';
 import { Anchor } from '~/components/anchor';
-import { SiReactquery, SiGithub, SiLinkedin, SiX } from 'react-icons/si';
+import { SiReactquery, SiGithub, SiX } from 'react-icons/si';
 import { getSponsors, getTalks } from '~/utils/data-access-layer';
 import { Sponsor } from '~/components/sponsor';
+import { FaLinkedin } from 'react-icons/fa';
 
 const TALKS = getTalks().slice(0, 2);
 const SPONSORS = getSponsors();
@@ -51,7 +52,7 @@ export default function Home() {
             GitHub
           </Anchor>
           <Anchor
-            icon={<SiLinkedin />}
+            icon={<FaLinkedin />}
             href="https://www.linkedin.com/in/gwansikk"
           >
             LinkedIn
