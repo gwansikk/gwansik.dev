@@ -84,9 +84,6 @@ importers:
       knip:
         specifier: ^6.4.1
         version: 6.4.1(@emnapi/core@1.7.1)(@emnapi/runtime@1.7.1)
-      postcss:
-        specifier: ^8.5.9
-        version: 8.5.9
       prettier:
         specifier: ^3.8.2
         version: 3.8.2
