@@ -44,7 +44,7 @@ export default function RootLayout({
       <body className={`px-6 antialiased ${pretendard.variable}`}>
         <Provider>
           <Nav />
-          <main className="container break-keep leading-relaxed text-zinc-900 dark:text-zinc-100">
+          <main className="container leading-relaxed break-keep text-zinc-900 dark:text-zinc-100">
             <article className="space-y-8 py-14">{children}</article>
           </main>
           <Footer />

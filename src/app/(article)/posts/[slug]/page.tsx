@@ -1,8 +1,7 @@
-import { MDXContent } from '~/components/(article)/mdx-content';
+import { MarkdownContent } from '~/components/(article)/markdown-content';
 import { notFound } from 'next/navigation';
 import { Title } from '~/components/title';
 import { ArticleTags } from '~/components/(article)/article-tags';
-import { mdxComponents } from '~/components/(article)/mdx-components';
 import { PageLink } from '~/components/page-link';
 import { PATH, BASE_URL } from '~/constants';
 import { List } from '~/components/list';
@@ -52,7 +51,7 @@ export default async function Post({ params }: Params) {
         <Title>{post.title}</Title>
         <ArticleTags date={post.date} />
       </header>
-      <MDXContent code={post.code} components={mdxComponents} />
+      <MarkdownContent document={post.document} />
       <List>
         <CopyButton />
         <MailButton />

@@ -1,4 +1,6 @@
-import { type Post, posts } from '#content';
+import { loadPosts, type Post } from '~/utils/posts';
+
+export type { Post };
 
 export type Talk = {
   conference: string;
@@ -12,7 +14,7 @@ type Sponsor = {
 };
 
 export function getPosts(): Post[] {
-  return posts.sort((a, b) => {
+  return loadPosts().sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
 }

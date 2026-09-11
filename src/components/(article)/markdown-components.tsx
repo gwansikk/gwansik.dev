@@ -1,8 +1,27 @@
 import { getImageMetadata } from '~/utils/image';
-import type { MDXComponents } from 'mdx/types';
+import type { MarkdownComponents } from '@tanstack/markdown/react';
 import Image from 'next/image';
+import type { ComponentProps } from 'react';
 
-export const mdxComponents: MDXComponents = {
+async function MarkdownImage({ src, alt }: ComponentProps<'img'>) {
+  if (typeof src !== 'string') return null;
+
+  const metadata = await getImageMetadata(src);
+
+  return (
+    <Image
+      className="rounded-2xl border dark:border-black"
+      src={metadata.src}
+      alt={alt ?? ''}
+      width={metadata.width}
+      height={metadata.height}
+      placeholder="blur"
+      blurDataURL={metadata.blurDataURL}
+    />
+  );
+}
+
+export const markdownComponents = {
   h1: ({ children, ...props }) => (
     <h2
       className="!mt-10 text-2xl font-bold text-black dark:text-zinc-100"
@@ -44,28 +63,21 @@ export const mdxComponents: MDXComponents = {
       {children}
     </a>
   ),
-  code: (props) => (
-    <code
-      className="rounded-md border-b bg-zinc-100 px-1 dark:border-zinc-700 dark:bg-zinc-900"
-      {...props}
-    />
-  ),
-  img: async ({ src, alt }) => {
-    const metadata = await getImageMetadata(src);
-
+  code: ({ className, ...props }) => {
+    // Fenced code blocks receive a `language-*` class from the renderer and
+    // are styled through the `pre.tm-code` container instead.
+    if (className?.startsWith('language-')) {
+      return <code className={className} {...props} />;
+    }
     return (
-      <Image
-        className="rounded-2xl border dark:border-black"
-        src={metadata.src}
-        alt={alt}
-        width={metadata.width}
-        height={metadata.height}
-        placeholder="blur"
-        blurDataURL={metadata.blurDataURL}
+      <code
+        className="rounded-md border-b bg-zinc-100 px-1 dark:border-zinc-700 dark:bg-zinc-900"
+        {...props}
       />
     );
   },
+  img: MarkdownImage,
   hr: (props) => (
     <hr className="m-auto h-10 w-1 border-none bg-zinc-600" {...props} />
   ),
-};
+} satisfies MarkdownComponents;

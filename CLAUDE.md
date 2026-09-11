@@ -4,14 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-Personal portfolio and blog site for Gwansik Kim (gwansik.dev). Built with Next.js 16 App Router, Velite for MDX content, and Tailwind CSS v4.
+Personal portfolio and blog site for Gwansik Kim (gwansik.dev). Built with Next.js 16 App Router, TanStack Markdown for content, and Tailwind CSS v4.
 
 ## Commands
 
 ```bash
-pnpm dev              # Dev server on port 1362 (runs velite first)
-pnpm build            # Production build (velite + next build)
-pnpm build:velite     # Rebuild content only
+pnpm dev              # Dev server on port 1362 (copies post assets first)
+pnpm build            # Production build (copies post assets first)
 pnpm lint             # ESLint
 pnpm typecheck        # TypeScript check (tsc --noEmit --skipLibCheck)
 pnpm knip             # Detect unused files/dependencies
@@ -21,12 +20,11 @@ pnpm knip             # Detect unused files/dependencies
 
 ### Content Pipeline
 
-MDX posts live in `content/posts/{slug}/index.mdx` with frontmatter (title, date, slug). Velite compiles them at build time into `.velite/`, accessible via `#content` path alias. All posts are statically generated via `generateStaticParams()`.
+Markdown posts live in `content/posts/{slug}/index.md` with frontmatter (title, date, slug). `src/utils/posts.ts` reads them from disk at build time and parses them into a `MarkdownDocument` AST with `@tanstack/markdown`. Relative image paths (`./assets/*`) are rewritten to `/static/posts/{slug}/assets/*`, where `scripts/copy-assets.mjs` copies them before `dev` and `build`. All posts are statically generated via `generateStaticParams()`.
 
 ### Key Path Aliases
 
 - `~/*` → `./src/*`
-- `#content` → `./.velite` (Velite-generated content)
 
 ### Routing
 
@@ -36,7 +34,7 @@ MDX posts live in `content/posts/{slug}/index.mdx` with frontmatter (title, date
 
 ### Data Layer
 
-`src/utils/data-access-layer.ts` centralizes all data access (getPosts, getTalks, getSponsors). Posts come from Velite; talks and sponsors are hardcoded.
+`src/utils/data-access-layer.ts` centralizes all data access (getPosts, getTalks, getSponsors). Posts come from `src/utils/posts.ts`; talks and sponsors are hardcoded.
 
 ### Styling
 
@@ -46,9 +44,9 @@ Tailwind CSS v4 with CSS custom properties for theming (light/dark via `prefers-
 
 Almost everything is a Server Component. Only `src/components/provider.tsx` uses `'use client'` (wraps PostHog, Vercel Analytics, Speed Insights).
 
-### MDX Rendering
+### Markdown Rendering
 
-`src/components/(article)/mdx-content.tsx` evaluates compiled Velite code at runtime via `useMDXComponent()`. Custom MDX component mappings are in `src/components/(article)/mdx-components.tsx` — images are async with blur placeholders.
+`src/components/(article)/markdown-content.tsx` renders the parsed AST with the `Markdown` React adapter from `@tanstack/markdown/react`. Tag-to-component mappings are in `src/components/(article)/markdown-components.tsx` — images are async with blur placeholders. Code blocks are highlighted with `@tanstack/highlight` (`src/utils/highlighter.ts`), which also emits the light/dark theme CSS variables.
 
 ### Fonts
 

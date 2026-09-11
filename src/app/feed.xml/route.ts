@@ -1,6 +1,7 @@
 import { EMAIL, SITE_NAME, BASE_URL } from '~/constants';
 import { getPosts } from '~/utils/data-access-layer';
 import { Feed } from 'feed';
+import { renderHtml } from '@tanstack/markdown/html';
 
 const ARTICLE = getPosts();
 
@@ -32,9 +33,9 @@ export function GET() {
     feed.addItem({
       title: article.title,
       id: article.slug,
-      link: `${BASE_URL}${article.slug}`,
+      link: `${BASE_URL}${article.permalink}`,
       // description: article.description,
-      content: article.content,
+      content: renderHtml(article.document),
       author: [master],
       contributor: [master],
       date: new Date(article.date),

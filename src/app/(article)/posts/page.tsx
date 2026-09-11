@@ -1,9 +1,8 @@
-import type { Post as TPost } from '#content';
 import Link from 'next/link';
 import { Title } from '~/components/title';
 import { ArticleTags } from '~/components/(article)/article-tags';
 import type { Metadata } from 'next';
-import { getPosts } from '~/utils/data-access-layer';
+import { getPosts, type Post as TPost } from '~/utils/data-access-layer';
 
 const POSTS = getPosts();
 
