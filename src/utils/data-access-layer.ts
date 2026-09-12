@@ -14,7 +14,7 @@ type Sponsor = {
 };
 
 export function getPosts(): Post[] {
-  return loadPosts().sort((a, b) => {
+  return loadPosts().toSorted((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
 }

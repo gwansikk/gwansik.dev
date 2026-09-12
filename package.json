@@ -7,7 +7,9 @@
     "typecheck": "tsc --noEmit --skipLibCheck",
     "build": "node scripts/copy-assets.mjs && next build",
     "start": "next start",
-    "lint": "eslint .",
+    "lint": "oxlint",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
     "knip": "knip"
   },
   "dependencies": {
@@ -30,11 +32,9 @@
     "@types/node": "^22.20.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "eslint": "^10.10.0",
-    "eslint-config-next": "16.3.4",
     "knip": "^6.35.1",
-    "prettier": "^3.9.6",
-    "prettier-plugin-tailwindcss": "^0.8.1",
+    "oxfmt": "^0.67.0",
+    "oxlint": "^1.82.0",
     "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2"
   },

@@ -11,7 +11,9 @@ Personal portfolio and blog site for Gwansik Kim (gwansik.dev). Built with Next.
 ```bash
 pnpm dev              # Dev server on port 1362 (copies post assets first)
 pnpm build            # Production build (copies post assets first)
-pnpm lint             # ESLint (flat config; currently blocked by typescript-eslint lacking TS 7 support)
+pnpm lint             # oxlint (.oxlintrc.json)
+pnpm format           # oxfmt, formats in place
+pnpm format:check     # oxfmt --check
 pnpm typecheck        # TypeScript check (tsc --noEmit --skipLibCheck)
 pnpm knip             # Detect unused files/dependencies
 ```
@@ -38,7 +40,7 @@ Markdown posts live in `content/posts/{slug}/index.md` with frontmatter (title, 
 
 ### Styling
 
-Tailwind CSS v4 with CSS custom properties for theming (light/dark via `prefers-color-scheme`). Class composition uses `cn()` from `src/utils/cn.ts` (clsx wrapper). Prettier auto-sorts Tailwind classes.
+Tailwind CSS v4 with CSS custom properties for theming (light/dark via `prefers-color-scheme`). Class composition uses `cn()` from `src/utils/cn.ts` (clsx wrapper). oxfmt sorts Tailwind classes (`sortTailwindcss` in `.oxfmtrc.json`, including `cn()` arguments).
 
 ### Client Components
 

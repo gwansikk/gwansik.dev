@@ -39,7 +39,7 @@ export function parseLineRanges(value: string | undefined): number[] {
       lines.add(line);
     }
   }
-  return [...lines].sort((a, b) => a - b);
+  return [...lines].toSorted((a, b) => a - b);
 }
 
 function toComponent(node: CodeBlockNode, collapse: string): ComponentNode {
