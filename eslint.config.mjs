@@ -1,0 +1,11 @@
+import coreWebVitals from 'eslint-config-next/core-web-vitals';
+import typescript from 'eslint-config-next/typescript';
+
+/** @type {import('eslint').Linter.Config[]} */
+const config = [
+  ...coreWebVitals,
+  ...typescript,
+  { ignores: ['.next/**', 'public/static/**', 'next-env.d.ts'] },
+];
+
+export default config;

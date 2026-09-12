@@ -7,7 +7,7 @@
     "typecheck": "tsc --noEmit --skipLibCheck",
     "build": "node scripts/copy-assets.mjs && next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "knip": "knip"
   },
   "dependencies": {
@@ -30,8 +30,6 @@
     "@types/node": "^22.20.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
-    "@typescript-eslint/eslint-plugin": "^8.70.0",
-    "@typescript-eslint/parser": "^8.70.0",
     "eslint": "^10.10.0",
     "eslint-config-next": "16.3.4",
     "knip": "^6.35.1",

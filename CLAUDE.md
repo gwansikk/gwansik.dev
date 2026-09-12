@@ -11,7 +11,7 @@ Personal portfolio and blog site for Gwansik Kim (gwansik.dev). Built with Next.
 ```bash
 pnpm dev              # Dev server on port 1362 (copies post assets first)
 pnpm build            # Production build (copies post assets first)
-pnpm lint             # ESLint
+pnpm lint             # ESLint (flat config; currently blocked by typescript-eslint lacking TS 7 support)
 pnpm typecheck        # TypeScript check (tsc --noEmit --skipLibCheck)
 pnpm knip             # Detect unused files/dependencies
 ```
@@ -47,6 +47,8 @@ Almost everything is a Server Component. Only `src/components/provider.tsx` uses
 ### Markdown Rendering
 
 `src/components/(article)/markdown-content.tsx` renders the parsed AST with the `Markdown` React adapter from `@tanstack/markdown/react`. Tag-to-component mappings are in `src/components/(article)/markdown-components.tsx` — images are async with blur placeholders. Code blocks are highlighted with `@tanstack/highlight` (`src/utils/highlighter.ts`), which also emits the light/dark theme CSS variables.
+
+Fence info strings support `{2, 6-7}` (highlight lines), `title="..."` and `collapse={21-42}`. Collapsing is implemented as a TanStack Markdown extension in `src/utils/markdown-extensions.ts`: it rewrites the code block into a `collapsible-code` component node, rendered by `src/components/(article)/collapsible-code.tsx` as a `<details>` group inside the highlighted `<pre>`. The extension also provides an HTML fallback for the RSS feed.
 
 ### Fonts
 

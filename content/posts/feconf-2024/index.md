@@ -123,7 +123,7 @@ export const useSchedule = ({ isNotAdmin }: UseScheduleParams) => {
 
 해결을 위해 단순히 가설을 세우고 관련 코드를 공부하고자 했어요. 이는 오픈 소스 문제해결을 위한 효율적인 방법이 아니였어요.
 
-```ts
+```ts collapse={21-42}
 // useQueries 타입 추론에 대한 코드 일부
 /**
  * QueriesOptions reducer recursively unwraps function arguments to infer/enforce type param

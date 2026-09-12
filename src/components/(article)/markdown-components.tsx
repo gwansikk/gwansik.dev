@@ -2,6 +2,8 @@ import { getImageMetadata } from '~/utils/image';
 import type { MarkdownComponents } from '@tanstack/markdown/react';
 import Image from 'next/image';
 import type { ComponentProps } from 'react';
+import { CollapsibleCode } from '~/components/(article)/collapsible-code';
+import { COLLAPSIBLE_CODE_TAG } from '~/utils/markdown-extensions';
 
 async function MarkdownImage({ src, alt }: ComponentProps<'img'>) {
   if (typeof src !== 'string') return null;
@@ -77,6 +79,7 @@ export const markdownComponents = {
     );
   },
   img: MarkdownImage,
+  [COLLAPSIBLE_CODE_TAG]: CollapsibleCode,
   hr: (props) => (
     <hr className="m-auto h-10 w-1 border-none bg-zinc-600" {...props} />
   ),

@@ -140,6 +140,36 @@ body {
   background: rgb(59 130 246 / 0.1);
 }
 
+.tm-collapse {
+  display: contents;
+}
+
+.tm-collapse > summary {
+  display: inline-block;
+  min-width: 100%;
+  width: max-content;
+  padding-inline: 3em 0.5em;
+  cursor: pointer;
+  list-style: none;
+  color: var(--th-comment);
+  background: rgb(113 113 122 / 0.12);
+  user-select: none;
+}
+
+.tm-collapse > summary::-webkit-details-marker {
+  display: none;
+}
+
+.tm-collapse > summary::before {
+  content: '\2026';
+  margin-right: 0.5em;
+}
+
+.tm-collapse[open] > summary .tm-collapse__closed,
+.tm-collapse:not([open]) > summary .tm-collapse__open {
+  display: none;
+}
+
 .tm-code--line-numbers .th-line::before {
   display: inline-block;
   width: 2em;

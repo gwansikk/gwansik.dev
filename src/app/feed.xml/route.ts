@@ -2,6 +2,7 @@ import { EMAIL, SITE_NAME, BASE_URL } from '~/constants';
 import { getPosts } from '~/utils/data-access-layer';
 import { Feed } from 'feed';
 import { renderHtml } from '@tanstack/markdown/html';
+import { collapsibleCodeExtension } from '~/utils/markdown-extensions';
 
 const ARTICLE = getPosts();
 
@@ -35,7 +36,9 @@ export function GET() {
       id: article.slug,
       link: `${BASE_URL}${article.permalink}`,
       // description: article.description,
-      content: renderHtml(article.document),
+      content: renderHtml(article.document, {
+        extensions: [collapsibleCodeExtension],
+      }),
       author: [master],
       contributor: [master],
       date: new Date(article.date),

@@ -6,6 +6,7 @@ import type {
   InlineNode,
   MarkdownDocument,
 } from '@tanstack/markdown';
+import { collapsibleCodeExtension } from '~/utils/markdown-extensions';
 
 export type Post = {
   title: string;
@@ -69,6 +70,7 @@ function readPost(dir: string): Post {
   const document = parseMarkdown(source, {
     frontmatter: true,
     headingIds: true,
+    extensions: [collapsibleCodeExtension],
   });
   const frontmatter = parseFrontmatter(document.frontmatter);
   resolveImagePaths(document.children, dir);

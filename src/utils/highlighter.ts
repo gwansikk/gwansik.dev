@@ -18,7 +18,7 @@ import {
   yaml,
 } from '@tanstack/highlight/languages';
 
-const highlighter = createHighlighter({
+export const highlighter = createHighlighter({
   languages: [
     css,
     diff,
